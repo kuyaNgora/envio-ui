@@ -1,6 +1,6 @@
 {
   "name": "@envio-ui/icons",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "React icon library for the Envio Design System",
   "main": "dist/index.js",
   "module": "dist/icons.esm.js",
@@ -28,7 +28,7 @@
     "clsx": "^1.1.1"
   },
   "peerDependencies": {
-   "react": "^18.2.0",
+    "react": "^18.2.0",
     "react-dom": "^18.2.0"
   }
 }
