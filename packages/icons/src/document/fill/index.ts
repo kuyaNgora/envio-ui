@@ -1,0 +1,15 @@
+export { default as IconArchive } from "./IconArchive";
+export { default as IconBook } from "./IconBook";
+export { default as IconBookOpen } from "./IconBookOpen";
+export { default as IconCalendar } from "./IconCalendar";
+export { default as IconClipboard } from "./IconClipboard";
+export { default as IconFile } from "./IconFile";
+export { default as IconFileLines } from "./IconFileLines";
+export { default as IconFilePlus } from "./IconFilePlus";
+export { default as IconFolder } from "./IconFolder";
+export { default as IconFolderMin } from "./IconFolderMin";
+export { default as IconFolderPlus } from "./IconFolderPlus";
+export { default as IconImage } from "./IconImage";
+export { default as IconImage2 } from "./IconImage2";
+export { default as IconMaps } from "./IconMaps";
+export { default as IconPantone } from "./IconPantone";

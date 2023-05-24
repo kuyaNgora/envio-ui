@@ -1,0 +1,34 @@
+{
+  "name": "@envio-ui/icons",
+  "version": "0.0.1",
+  "description": "React icon library for the Envio Design System",
+  "main": "dist/index.js",
+  "module": "dist/icons.esm.js",
+  "typings": "dist/index.d.ts",
+  "envio:src": "./src/index.ts",
+  "author": "Tech Team <tech@envio.co.id>",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsdx build --transpileOnly --tsconfig tsconfig.build.json",
+    "clean": "rimraf dist",
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
+    "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\"",
+    "prepublish": "yarn build",
+    "start": "tsdx watch --tsconfig tsconfig.build.json --verbose",
+    "type-check": "tsc --noEmit",
+    "validate": "yarn lint && yarn type-check"
+  },
+  "dependencies": {
+    "clsx": "^1.1.1"
+  },
+  "peerDependencies": {
+   "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}

@@ -1,0 +1,17 @@
+export { default as IconArchiveOutline } from "./IconArchiveOutline";
+export { default as IconBookOpenOutline } from "./IconBookOpenOutline";
+export { default as IconBookOutline } from "./IconBookOutline";
+export { default as IconCalendarOutline } from "./IconCalendarOutline";
+export { default as IconClipboardOutline } from "./IconClipboardOutline";
+export { default as IconFileLinesOutline } from "./IconFileLinesOutline";
+export { default as IconFileMinOutline } from "./IconFileMinOutline";
+export { default as IconFileOutline } from "./IconFileOutline";
+export { default as IconFilePlusOutline } from "./IconFilePlusOutline";
+export { default as IconFolderMinOutline } from "./IconFolderMinOutline";
+export { default as IconFolderOutline } from "./IconFolderOutline";
+export { default as IconFolderPlusOutline } from "./IconFolderPlusOutline";
+export { default as IconImageOutline } from "./IconImageOutline";
+export { default as IconListOutline } from "./IconListOutline";
+export { default as IconMapsOutline } from "./IconMapsOutline";
+export { default as IconPantoneOutline } from "./IconPantoneOutline";
+export { default as IconTextOutline } from "./IconTextOutline";

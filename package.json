@@ -1,0 +1,60 @@
+{
+  "name": "envio-ui",
+  "version": "0.0.1",
+  "description": "Envio Design System",
+  "main": "N/A",
+  "author": "Tech Team <tech@envio.co.id>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "devDependencies": {
+    "husky": "^8.0.0",
+    "lerna": "^6.6.2",
+    "@commitlint/config-conventional": "^17.6.3",
+    "@rollup/plugin-node-resolve": "^15.0.2",
+    "@types/node": "^20.2.3",
+    "@types/react": "^18.2.6",
+    "@types/react-dom": "^18.2.4",
+    "@types/styled-components": "^5.1.26",
+    "@typescript-eslint/eslint-plugin": "^5.59.7",
+    "@typescript-eslint/parser": "^5.59.7",
+    "eslint": "^8.41.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-import-resolver-typescript": "^3.5.5",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "lint-staged": "^13.2.2",
+    "prettier": "^2.8.8",
+    "rimraf": "^5.0.1",
+    "tsdx": "^0.14.1",
+    "typeface-inter": "^3.18.1",
+    "typescript": "^5.0.4"
+  },
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "build": "lerna run build",
+    "prepare": "husky install",
+    "clean": "lerna run clean",
+    "lerna": "lerna",
+    "lint": "lerna run lint",
+    "prepublish": "lerna run prepublish",
+    "start": "lerna run start --stream --parallel",
+    "canary:release": "lerna version prerelease --preid=canary",
+    "canary:publish": "lerna publish from-git --npm-tag canary --yes",
+    "test": "lerna run test --",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "styled-components": "^6.0.0-rc.2"
+  }
+}
