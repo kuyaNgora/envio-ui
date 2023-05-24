@@ -1,6 +1,6 @@
 {
   "name": "@envio-ui/icons",
-  "version": "0.1.1-alpha.0",
+  "version": "1.0.0-alpha.0",
   "description": "React icon library for the Envio Design System",
   "main": "dist/index.js",
   "module": "dist/icons.esm.js",
