@@ -38,6 +38,7 @@ module.exports = {
         endOfLine: "auto",
       },
     ],
+    "import/export": 0,
 
     // Cannot use `Component.displayName` pattern on class components in TS.
     "react/static-property-placement": "off",

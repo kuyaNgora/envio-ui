@@ -1,12 +1,12 @@
 {
-  "name": "@envio-ui/icons",
-  "version": "1.0.0-alpha.0",
-  "description": "React icon library for the Envio Design System",
+  "name": "@envio-ui/core",
+  "version": "0.0.1",
+  "description": "Core design tokens for the Envio Design System.",
   "sideEffects": false,
   "main": "dist/index.js",
   "module": "dist/icons.esm.js",
   "typings": "dist/index.d.ts",
-  "envio:src": "./src/index.ts",
+  "aksara:src": "./src/index.ts",
   "author": "Tech Team <tech@envio.co.id>",
   "license": "MIT",
   "files": [
@@ -26,11 +26,6 @@
     "validate": "yarn lint && yarn type-check"
   },
   "dependencies": {
-    "clsx": "^1.1.1"
-  },
-  "peerDependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "gitHead": "89349e76132511a507734c792b072287e69dcd69"
+    "polished": "^4.1.3"
+  }
 }

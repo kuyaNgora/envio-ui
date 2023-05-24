@@ -2,6 +2,7 @@
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
     "paths": {
+      "@envio-ui/core": ["./packages/core/src"],
       "@envio-ui/icons": ["./packages/icons/src"],
     }
   }
