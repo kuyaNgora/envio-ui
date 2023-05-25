@@ -1,9 +1,0 @@
-export { default as IconBriefcase } from "./IconBriefcase";
-export { default as IconCreditCard } from "./IconCreditCard";
-export { default as IconGlobe2 } from "./IconGlobe2";
-export { default as IconGlobe3 } from "./IconGlobe3";
-export { default as IconPieChart } from "./IconPieChart";
-export { default as IconPieChart2 } from "./IconPieChart2";
-export { default as IconPriceTag } from "./IconPriceTag";
-export { default as IconShoppingBag } from "./IconShoppingBag";
-export { default as IconShoppingCart } from "./IconShoppingCart";

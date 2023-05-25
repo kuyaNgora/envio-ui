@@ -1,0 +1,49 @@
+{
+  "name": "@envio-ui/helpers",
+  "version": "1.0.0",
+  "description": "Helpers components for the Envio Design System",
+  "main": "dist/index.js",
+  "module": "dist/icons.esm.js",
+  "typings": "dist/index.d.ts",
+  "envio:src": "./src/index.ts",
+  "author": "Tech Team <tech@envio.co.id>",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsdx build --transpileOnly --tsconfig tsconfig.build.json",
+    "clean": "rimraf dist",
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
+    "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\"",
+    "prepublish": "yarn build",
+    "start": "tsdx watch --tsconfig tsconfig.build.json --verbose",
+    "type-check": "tsc --noEmit",
+    "validate": "yarn lint && yarn type-check"
+  },
+  "dependencies": {
+    "@envio-ui/core": "^1.0.1-alpha.0",
+    "@radix-ui/react-portal": "^1.0.2",
+    "@radix-ui/react-visually-hidden": "^1.0.2",
+    "@styled-system/css": "^5.1.5",
+    "@styled-system/should-forward-prop": "^5.1.5",
+    "@styled-system/theme-get": "^5.1.2",
+    "@types/styled-system": "^5.1.16",
+    "@types/styled-system__css": "^5.0.17",
+    "@types/styled-system__theme-get": "^5.0.2",
+    "clsx": "^1.2.1",
+    "focus-trap": "^7.4.3",
+    "polished": "^4.2.2",
+    "react-transition-group": "^4.4.5",
+    "styled-system": "^5.1.5"
+  },
+  "peerDependencies": {
+    "@envio-ui/icons": "^1.0.1-alpha.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "styled-components": "^5.3.9"
+  }
+}

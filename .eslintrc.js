@@ -39,7 +39,8 @@ module.exports = {
       },
     ],
     "import/export": 0,
-
+    "react/require-default-props": "off",
+    "no-nested-ternary": "off",
     // Cannot use `Component.displayName` pattern on class components in TS.
     "react/static-property-placement": "off",
     "react/function-component-definition": [

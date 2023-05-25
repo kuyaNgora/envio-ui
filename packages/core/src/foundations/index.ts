@@ -1,6 +1,6 @@
 import colors from "./colors";
+import radii from "./radii";
 import responsive from "./responsive";
-import rounded from "./rounded";
 import shadows from "./shadows";
 import space from "./space";
 import typography from "./typography";
@@ -16,7 +16,7 @@ const foundations = {
   sizes: space,
   ...typography,
   shadows,
-  rounded,
+  radii,
   ...responsive,
 };
 

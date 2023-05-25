@@ -6,7 +6,7 @@
   "main": "dist/index.js",
   "module": "dist/icons.esm.js",
   "typings": "dist/index.d.ts",
-  "aksara:src": "./src/index.ts",
+  "envio:src": "./src/index.ts",
   "author": "Tech Team <tech@envio.co.id>",
   "license": "MIT",
   "files": [

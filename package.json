@@ -11,7 +11,23 @@
       "packages/*"
     ]
   },
+   "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "build": "lerna run build",
+    "prepare": "husky install",
+    "clean": "lerna run clean",
+    "lerna": "lerna",
+    "lint": "lerna run lint",
+    "prepublish": "lerna run prepublish",
+    "start": "lerna run start --stream --parallel",
+    "canary:release": "lerna version prerelease --preid=canary",
+    "canary:publish": "lerna publish from-git --npm-tag canary --yes",
+    "test": "lerna run test --",
+    "storybook": "yarn workspace @envio-ui/design run storybook",
+    "type-check": "tsc --noEmit"
+  },
   "devDependencies": {
+    "@commitlint/cli": "^17.6.3",
     "@commitlint/config-conventional": "^17.6.3",
     "@rollup/plugin-node-resolve": "^15.0.2",
     "@types/node": "^20.2.3",
@@ -38,24 +54,10 @@
     "typeface-inter": "^3.18.1",
     "typescript": "^5.0.4"
   },
-  "scripts": {
-    "bootstrap": "lerna bootstrap",
-    "build": "lerna run build",
-    "prepare": "husky install",
-    "clean": "lerna run clean",
-    "lerna": "lerna",
-    "lint": "lerna run lint",
-    "prepublish": "lerna run prepublish",
-    "start": "lerna run start --stream --parallel",
-    "canary:release": "lerna version prerelease --preid=canary",
-    "canary:publish": "lerna publish from-git --npm-tag canary --yes",
-    "test": "lerna run test --",
-    "type-check": "tsc --noEmit"
-  },
   "dependencies": {
-    "@envio-ui/icons": "^1.0.0-alpha.0",
+    "@envio-ui/icons": "^1.0.1-alpha.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "styled-components": "^6.0.0-rc.2"
+    "styled-components": "^5.3.9"
   }
 }
