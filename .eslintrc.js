@@ -16,6 +16,7 @@ module.exports = {
   parser: "@typescript-eslint/parser",
   plugins: ["@typescript-eslint", "prettier"],
   rules: {
+    "no-console": "off",
     "dot-notation": "off",
     "jsx-a11y/href-no-hash": ["off"],
     "jsx-a11y/anchor-is-valid": "off",
@@ -28,6 +29,9 @@ module.exports = {
         extensions: [".jsx", ".tsx"],
       },
     ],
+    "import/prefer-default-export": "off",
+    "import/no-cycle": "off",
+    "react/default-props-match-prop-types": "off",
     "react/jsx-one-expression-per-line": "off",
     "react/jsx-props-no-spreading": "off",
     "react/jsx-wrap-multilines": 1,

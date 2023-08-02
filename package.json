@@ -11,7 +11,7 @@
       "packages/*"
     ]
   },
-   "scripts": {
+  "scripts": {
     "bootstrap": "lerna bootstrap",
     "build": "lerna run build",
     "prepare": "husky install",
@@ -58,6 +58,7 @@
     "@envio-ui/icons": "^1.0.1-alpha.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-text-mask": "^5.5.0",
     "styled-components": "^5.3.9"
   }
 }

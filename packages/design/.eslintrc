@@ -1,0 +1,27 @@
+{
+  "extends": "../../.eslintrc.js",
+  "rules": {
+    // disable the rule for all files
+    "@typescript-eslint/explicit-function-return-type": "off"
+  },
+  "overrides": [
+    {
+      "files": ["**/*.stories.tsx", "**/*.story.ts"],
+      "rules": {
+        "@typescript-eslint/no-var-requires": ["off"],
+        "import/prefer-default-export": "off",
+        "react/default-props-match-prop-types": "off"
+      }
+    },
+    {
+      "files": ["rollup.config.js"],
+      "parserOptions": {
+        "version": 2018,
+        "sourceType": "module",
+        "ecmaFeatures": {
+          "modules": true
+        }
+      }
+    }
+  ]
+}

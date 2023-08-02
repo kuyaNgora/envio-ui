@@ -22,54 +22,6 @@ const blue = {
   blue10: "#054B7A",
 };
 
-// const indigo = {
-//   // Indigo
-//   /** indigo-01 - Soap */
-//   indigo01: "#F3F1FD",
-//   /** indigo-02 - Steel */
-//   indigo02: "#E8E2FB",
-//   /** indigo-03 - Ceil */
-//   indigo03: "#D0C6F6",
-//   /** indigo-04 - Glaucous */
-//   indigo04: "#B9A9F2",
-//   /** indigo-05 - Pigment */
-//   indigo05: "#967FEC",
-//   /** indigo-06 - Imperial */
-//   indigo06: "#6E4EE4",
-//   /** indigo-07 - Indigo */
-//   indigo07: "#5F3AE1",
-//   /** indigo-08 - Royal */
-//   indigo08: "#461FD1",
-//   /** indigo-09 - Zaffre */
-//   indigo09: "#34179D",
-//   /** indigo-10 - Xiketic */
-//   indigo10: "#1D0D57"
-// };
-
-// const turquoise = {
-//   // Turquoise
-//   /** turquoise-01 - Bubbles */
-//   turquoise01: "#E7FAFD",
-//   /** turquoise-02 - Diamond */
-//   turquoise02: "#B9F1F9",
-//   /** turquoise-03 - Cyan */
-//   turquoise03: "#8BE7F5",
-//   /** turquoise-04 - Sky */
-//   turquoise04: "#5CDEF1",
-//   /** turquoise-05 - Surf */
-//   turquoise05: "#2ED5ED",
-//   /** turquoise-06 - Turquoise */
-//   turquoise06: "#00CCE9",
-//   /** turquoise-07 - Bondi */
-//   turquoise07: "#00A7BF",
-//   /** turquoise-08 - Teal */
-//   turquoise08: "#008295",
-//   /** turquoise-09 - Metallic */
-//   turquoise09: "#005D6A",
-//   /** turquoise-10 - Jungle */
-//   turquoise10: "#003840"
-// };
-
 const green = {
   // Green
   /** green-01 - Vanishing Point */
@@ -142,31 +94,7 @@ const red = {
   red10: "#ba3030",
 };
 
-const greyLegacy = {
-  // Grey (legacy)
-  /** grey-01 - White */
-  grey01: "#ffffff",
-  /** grey-02 - Ghost */
-  grey02: "#f7f8f9",
-  /** grey-03 - Isabelline */
-  grey03: "#ebedef",
-  /** grey-04 - Gainsboro */
-  grey04: "#d7dbdf",
-  /** grey-05 - Ash Grey */
-  grey05: "#b0b7bf",
-  /** grey-06 - Grey Blue */
-  grey06: "#89949f",
-  /** grey-07 - Aurometalsaurus */
-  grey07: "#62707f",
-  /** grey-08 - Outer Space */
-  grey08: "#313f4e",
-  /** grey-09 - Japanese Indigo */
-  grey09: "#253648",
-  /** grey-10 - Yankees Blue */
-  grey10: "#1e2b3a",
-};
-
-const grey = {
+const neutral = {
   /** greylight-01 - White */
   greylight01: "#FFFFFF",
   /** greylight-02 - Ghost */
@@ -228,22 +156,21 @@ const systemColors = {
   ...green,
   ...orange,
   ...red,
-  ...grey,
-  ...greyLegacy,
+  ...neutral,
   ...yellow,
 };
 
 /** Color pallette. Contains old Kata Platform colors, experimental colors, and style tokens. */
 const colors = {
-  white: "#fff",
-  black: "#202020",
+  white: systemColors.greylight01,
+  black: systemColors.greydark05,
   ...systemColors,
 
   // Core tokens
   bg: systemColors.greylight02,
   "bg-secondary": systemColors.greydark05,
   primary: blue.blue09,
-  secondary: grey.greydark05,
+  secondary: neutral.greydark05,
   warning: orange.orange09,
   danger: red.red09,
   info: blue.blue06,
