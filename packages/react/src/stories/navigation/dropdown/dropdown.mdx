@@ -1,0 +1,162 @@
+import { Meta, Story, Canvas, Source, ArgTypes } from '@storybook/blocks';
+import * as DropdownStories  from './dropdown.stories.tsx';
+
+<Meta title="Components/Navigation/Dropdown"  />
+
+# Dropdown
+<Canvas>
+  <Story of={DropdownStories.Example} />
+</Canvas>
+
+### Anatomy
+<Source
+    code={
+`<Dropdown>
+    <Dropdown.Trigger />
+    <Dropdown.Portal>
+        <Dropdown.Content>
+            <Dropdown.Item />
+
+            <Dropdown.Separator />
+
+            <Dropdown.Sub>
+                <Dropdown.SubTrigger />
+                <Dropdown.Portal>
+                    <Dropdown.Item />
+                </Dropdown.Portal>
+            </Dropdown.Sub>
+
+            <Dropdown.CheckboxItem />
+
+            <Dropdown.Label />
+
+            <Dropdown.RadioGroup>
+                <Dropdown.RadioItem>
+            </Dropdown.RadioGroup>
+
+        </Dropdown.Content>
+    </Dropdown.Portal>
+</Dropdown>`
+    }
+    dark
+    language="tsx"
+/>
+
+### Usage
+
+<Source code={`
+import React from "react";
+import { IconMenu2Outline } from "@envio-ui/icons";
+import { Dropdown, Button } from "@envio-ui/design";
+
+export const Example: React.FC = () => {
+  const [bookmarksChecked, setBookmarksChecked] = React.useState(true);
+  const [urlsChecked, setUrlsChecked] = React.useState(false);
+  const [person, setPerson] = React.useState("pedro");
+
+  return (
+    <Dropdown>
+      <Dropdown.Trigger asChild>
+        <Button
+          icon={IconMenu2Outline}
+          iconSize={20}
+          size="sm"
+          variant="primary"
+        />
+      </Dropdown.Trigger>
+
+      <Dropdown.Portal>
+        <Dropdown.Content>
+          <Dropdown.Item>asdf</Dropdown.Item>
+          <Dropdown.Item>asdf</Dropdown.Item>
+          <Dropdown.Item disabled>asdf</Dropdown.Item>
+          <Dropdown.Item>asdf</Dropdown.Item>
+
+          <Dropdown.Separator />
+
+          <Dropdown.Sub>
+            <Dropdown.SubTrigger>More Tools</Dropdown.SubTrigger>
+            <Dropdown.Portal>
+              <Dropdown.SubContent sideOffset={2} alignOffset={-5}>
+                <Dropdown.Item>asdf</Dropdown.Item>
+                <Dropdown.Item disabled>asdf</Dropdown.Item>
+                <Dropdown.Item>asdf</Dropdown.Item>
+              </Dropdown.SubContent>
+            </Dropdown.Portal>
+          </Dropdown.Sub>
+
+          <Dropdown.Separator />
+
+          <Dropdown.CheckboxItem
+            checked={bookmarksChecked}
+            onCheckedChange={setBookmarksChecked}
+          >
+            Show Bookmarks
+          </Dropdown.CheckboxItem>
+
+          <Dropdown.CheckboxItem
+            className="DropdownCheckboxItem"
+            checked={urlsChecked}
+            onCheckedChange={setUrlsChecked}
+          >
+            Show Full URLs
+          </Dropdown.CheckboxItem>
+
+          <Dropdown.Separator />
+
+          <Dropdown.Label>People</Dropdown.Label>
+          <Dropdown.RadioGroup value={person} onValueChange={setPerson}>
+            <Dropdown.RadioItem value="pedro">
+              Pedro Duarte
+            </Dropdown.RadioItem>
+            <Dropdown.RadioItem value="colm">
+              Colm Tuite
+            </Dropdown.RadioItem>
+          </Dropdown.RadioGroup>
+        </Dropdown.Content>
+      </Dropdown.Portal>
+    </Dropdown>
+  );
+};
+`} dark language="tsx" />
+
+### Props
+#### Dropdown
+<ArgTypes of={DropdownStories} exclude={["asChild", "forceMount", "container", "hideWhenDetached", "sticky", "arrowPadding", "collisionPadding", "collisionBoundary", "avoidCollisions", "alignOffset", "align", "sideOffset", "side", "onInteractOutside","onFocusOutside", "onPointerDownOutside", "onEscapeKeyDown", "onCloseAutoFocus", "loop", "disabled", "onSelect", "textValue", "checked", "onCheckedChange", "onValueChange", "value"  ]} />
+
+#### Dropdown.Trigger
+<ArgTypes of={DropdownStories} exclude={["defaultOpen", "open", "onOpenChange", "modal", "dir", "forceMount", "container", "hideWhenDetached", "sticky", "arrowPadding", "collisionPadding", "collisionBoundary", "avoidCollisions", "alignOffset", "align", "sideOffset", "side", "onInteractOutside","onFocusOutside", "onPointerDownOutside", "onEscapeKeyDown", "onCloseAutoFocus", "loop", "disabled", "onSelect", "textValue", "checked", "onCheckedChange", "onValueChange", "value"]} />
+
+#### Dropdown.Portal
+<ArgTypes of={DropdownStories} exclude={["defaultOpen", "open", "onOpenChange", "modal", "dir", "asChild", "hideWhenDetached", "sticky", "arrowPadding", "collisionPadding", "collisionBoundary", "avoidCollisions", "alignOffset", "align", "sideOffset", "side", "onInteractOutside","onFocusOutside", "onPointerDownOutside", "onEscapeKeyDown", "onCloseAutoFocus", "loop", "disabled", "onSelect", "textValue", "checked", "onCheckedChange", "onValueChange", "value"]} />
+
+#### Dropdown.Content
+<ArgTypes of={DropdownStories} exclude={["defaultOpen", "open", "onOpenChange", "modal", "dir", "container", "disabled", "onSelect", "textValue", "checked", "onCheckedChange", "onValueChange", "value"]} />
+
+#### Dropdown.Item
+<ArgTypes of={DropdownStories} exclude={["defaultOpen", "open", "onOpenChange", "modal", "dir", "forceMount", "container", "hideWhenDetached", "sticky", "arrowPadding", "collisionPadding", "collisionBoundary", "avoidCollisions", "alignOffset", "align", "sideOffset", "side", "onInteractOutside","onFocusOutside", "onPointerDownOutside", "onEscapeKeyDown", "onCloseAutoFocus", "loop", "checked", "onCheckedChange", "onValueChange", "value"]} />
+
+
+#### Dropdown.Group
+<ArgTypes of={DropdownStories} exclude={["defaultOpen", "open", "onOpenChange", "modal", "dir", "forceMount", "container", "hideWhenDetached", "sticky", "arrowPadding", "collisionPadding", "collisionBoundary", "avoidCollisions", "alignOffset", "align", "sideOffset", "side", "onInteractOutside","onFocusOutside", "onPointerDownOutside", "onEscapeKeyDown", "onCloseAutoFocus", "loop", "disabled","onSelect","textValue", "checked", "onCheckedChange", "onValueChange", "value"]} />
+
+#### Dropdown.Label
+<ArgTypes of={DropdownStories} exclude={["defaultOpen", "open", "onOpenChange", "modal", "dir", "forceMount", "container", "hideWhenDetached", "sticky", "arrowPadding", "collisionPadding", "collisionBoundary", "avoidCollisions", "alignOffset", "align", "sideOffset", "side", "onInteractOutside","onFocusOutside", "onPointerDownOutside", "onEscapeKeyDown", "onCloseAutoFocus", "loop", "disabled", "onSelect", "textValue", "checked", "onCheckedChange", "onValueChange", "value"]} />
+
+#### Dropdown.CheckboxItem
+<ArgTypes of={DropdownStories} exclude={["defaultOpen", "open", "onOpenChange", "modal", "dir", "forceMount", "forceMount", "container", "hideWhenDetached", "sticky", "arrowPadding", "collisionPadding", "collisionBoundary", "avoidCollisions", "alignOffset", "align", "sideOffset", "side", "onInteractOutside","onFocusOutside", "onPointerDownOutside", "onEscapeKeyDown", "onCloseAutoFocus", "loop", "onValueChange", "value"]} />
+
+#### Dropdown.RadioGroup
+<ArgTypes of={DropdownStories} exclude={["defaultOpen", "open", "onOpenChange", "modal", "dir", "forceMount", "forceMount", "container", "hideWhenDetached", "sticky", "arrowPadding", "collisionPadding", "collisionBoundary", "avoidCollisions", "alignOffset", "align", "sideOffset", "side", "onInteractOutside","onFocusOutside", "onPointerDownOutside", "onEscapeKeyDown", "onCloseAutoFocus", "loop", "checked", "onSelect", "textValue", "disabled", "onCheckedChange"]} />
+
+#### Dropdown.RadioItem
+<ArgTypes of={DropdownStories} exclude={["defaultOpen", "open", "onOpenChange", "modal", "dir", "forceMount", "forceMount", "container", "hideWhenDetached", "sticky", "arrowPadding", "collisionPadding", "collisionBoundary", "avoidCollisions", "alignOffset", "align", "sideOffset", "side", "onInteractOutside","onFocusOutside", "onPointerDownOutside", "onEscapeKeyDown", "onCloseAutoFocus", "loop", "checked", "onCheckedChange", "onValueChange" ]} />
+
+#### Dropdown.Sub
+<ArgTypes of={DropdownStories} exclude={[ "modal", "dir", "forceMount", "forceMount", "container", "hideWhenDetached", "sticky", "arrowPadding", "collisionPadding", "collisionBoundary", "avoidCollisions", "alignOffset", "align", "sideOffset", "side", "onInteractOutside","onFocusOutside", "onPointerDownOutside", "onEscapeKeyDown", "onCloseAutoFocus", "loop", "checked", "onCheckedChange", "onValueChange", "disabled", "onSelect", "textValue", "value", "asChild"]} />
+
+#### Dropdown.SubTrigger
+<ArgTypes of={DropdownStories} exclude={[ "modal", "dir", "forceMount", "forceMount", "container", "hideWhenDetached", "sticky", "arrowPadding", "collisionPadding", "collisionBoundary", "avoidCollisions", "alignOffset", "align", "sideOffset", "side", "onInteractOutside","onFocusOutside", "onPointerDownOutside", "onEscapeKeyDown", "onCloseAutoFocus", "loop", "checked", "onCheckedChange", "onValueChange", "open", "onSelect", "onOpenChange", "value", "defaultOpen"]} />
+
+#### Dropdown.SubContent
+<ArgTypes of={DropdownStories} exclude={["defaultOpen", "open", "onOpenChange", "modal", "dir", "container", "disabled", "onSelect", "textValue", "checked", "onCheckedChange", "onValueChange", "value", "onCloseAutoFocus", "side", "align", ]} />

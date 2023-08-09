@@ -10,6 +10,7 @@
     "jsx": "react",
     "lib": ["dom", "esnext"],
     "module": "esnext",
+    "target": "es5",
     "moduleResolution": "node",
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,

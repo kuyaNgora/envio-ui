@@ -5,6 +5,7 @@
       "@envio-ui/core": ["./packages/core/src"],
       "@envio-ui/icons": ["./packages/icons/src"],
       "@envio-ui/helpers": ["./packages/helpers/src"],
+      "@envio-ui/react": ["./packages/react/src"],
     }
   }
 }

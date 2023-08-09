@@ -23,7 +23,7 @@
     "canary:release": "lerna version prerelease --preid=canary",
     "canary:publish": "lerna publish from-git --npm-tag canary --yes",
     "test": "lerna run test -- --passWithNoTests",
-    "storybook": "yarn workspace @envio-ui/design run storybook",
+    "storybook": "yarn workspace @envio-ui/react run storybook",
     "type-check": "tsc --noEmit"
   },
   "devDependencies": {
@@ -55,7 +55,6 @@
     "typescript": "^5.0.4"
   },
   "dependencies": {
-    "@envio-ui/icons": "^1.0.1-alpha.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-text-mask": "^5.5.0",

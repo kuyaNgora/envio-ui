@@ -1,0 +1,26 @@
+import { Meta, Story, Canvas, Source, ArgTypes } from '@storybook/blocks';
+import * as ProgressStories  from './progress.stories.tsx';
+
+<Meta title="Components/Feedback/Progress"  />
+
+# Progress
+Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.
+
+<Canvas>
+  <Story of={ProgressStories.Example} />
+</Canvas>
+
+### Usage
+<Source code={`
+import React from "react";
+import { Progress, ProgressProps } from "@envio-ui/design";
+
+export const Example: React.FC<ProgressProps> = () => {
+  return (
+    <Progress value={80.9} />
+  );
+};
+`} dark language="tsx" />
+
+### Props
+<ArgTypes of={ProgressStories} />

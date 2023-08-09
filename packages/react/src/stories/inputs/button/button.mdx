@@ -1,0 +1,75 @@
+import { Meta, Story, Canvas, Source, ArgTypes } from '@storybook/blocks';
+import * as ButtonStories  from './button.stories.tsx';
+
+<Meta title="Components/Inputs/Button"  />
+
+# Button
+Buttons are used to trigger an action for the user. This is the element that users will be interacting with the most and because there are so many uses of buttons, the Button component has a lot of variations we can use. Color, fill, size, and width can all be mixed and matched to get the exact button needed.
+
+<Canvas>
+    <Story of={ButtonStories.Example} />
+    <Story of={ButtonStories.WithIcon} />
+    <Story of={ButtonStories.IconOnly} />
+</Canvas>
+
+### Usage
+#### Default
+<Source code={`
+import React from "react";
+import { Button, ButtonProps } from "@envio-ui/design";
+
+export const Example: React.FC<ButtonProps> = () => {
+  return (
+    <Button
+        variant="primary"
+        size="md"
+    >
+        Push Me
+    </Button>
+  );
+};
+`} of={ButtonStories.Example} dark language="tsx" />
+
+#### With Icon
+<Source code={`
+import React from "react";
+import { Button, ButtonProps } from "@envio-ui/design";
+import { IconEdit } from "@envio-ui/icons";
+
+export const Example: React.FC<ButtonProps> = () => {
+  return (
+    <Button
+        variant="primary"
+        size="md"
+        icon={IconEdit}
+        iconPosition="left"
+        iconSize={24}
+    >
+        Push Me
+    </Button>
+  );
+};
+`} of={ButtonStories.WithIcon} dark language="tsx" />
+
+#### Icon Only
+<Source code={`
+import React from "react";
+import { Button, ButtonProps } from "@envio-ui/design";
+import { IconEdit } from "@envio-ui/icons";
+
+export const Example: React.FC<ButtonProps> = () => {
+  return (
+    <Button
+        variant="primary"
+        size="md"
+        icon={IconEdit}
+        iconPosition="left"
+        iconSize={24}
+    />
+
+  );
+};
+`} of={ButtonStories.IconOnly} dark language="tsx" />
+
+### Props
+<ArgTypes of={ButtonStories} sort="alpha" />

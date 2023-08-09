@@ -1,0 +1,49 @@
+import { Meta, Story, Canvas, Source, ArgTypes } from '@storybook/blocks';
+import * as StepperStories  from './stepper.stories.tsx';
+
+<Meta title="Components/Data & Display/Stepper"  />
+
+# Stepper
+<Canvas>
+  <Story of={StepperStories.ListLog} />
+</Canvas>
+
+### Usage
+<Source code={`
+import React from "react";
+import { Stepper } from "@envio-ui/design";
+
+export const Example: React.FC = () => {
+  return (
+    <Stepper>
+      <Stepper.Item
+        title="Delivery status (Active)"
+        subtitle="DD/MM/YYYY"
+        content={<div>Copy text that supporting delivery status</div>}
+      />
+      <Stepper.Item
+        title="Delivery status"
+        subtitle="DD/MM/YYYY"
+        content={<div>Copy text that supporting delivery status</div>}
+      />
+      <Stepper.Item
+        title="Delivery status"
+        subtitle="DD/MM/YYYY"
+        content={<div>Copy text that supporting delivery status</div>}
+      />
+      <Stepper.Item
+        title="Delivery status"
+        subtitle="DD/MM/YYYY"
+        content={<div>Copy text that supporting delivery status</div>}
+      />
+    </Stepper>
+  );
+};
+`} of={StepperStories.ListLog} dark language="tsx" />
+
+### Props
+#### Stepper
+<ArgTypes of={StepperStories.ListLog} exclude={["title", "subtitle", "content"]} />
+
+#### Stepper.Item
+<ArgTypes of={StepperStories.ListLog} exclude={["className", "style", "activeColor", "inactiveColor"]} />

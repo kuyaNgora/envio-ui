@@ -1,0 +1,49 @@
+import { Meta, Story, Canvas, Source, ArgTypes } from '@storybook/blocks';
+import * as DrawerStories  from './drawer.stories.tsx';
+
+<Meta title="Components/Navigation/Drawer"  />
+
+# Drawer
+<Canvas>
+  <Story of={DrawerStories.Example} />
+</Canvas>
+
+### Usage
+<Source code={`
+import React from "react";
+import { Box, Button, Drawer, Text } from "@envio-ui/design";
+
+export const Example: React.FC = () => {
+  const [isOpen, setIsOpen] = React.useState(false);
+
+  const toggle = () => {
+    setIsOpen(prev => !prev);
+  };
+
+  return (
+    <Box p="md">
+      <Text as="p">Click the button below to open the drawer.</Text>
+      <Button variant="primary" size="lg" onClick={() => setIsOpen(!isOpen)}>
+        Toggle Drawer
+      </Button>
+
+      <Drawer open={isOpen} onClose={toggle} direction="left" size={300} overlay >
+        <div
+          style={{
+            padding: 20,
+            display: "flex",
+            flex: 1,
+            alignContent: "space-between",
+            width: "100%",
+          }}
+        >
+          <div style={{ fontWeight: "bold" }}>Hello World! 🚀🥳</div>
+        </div>
+      </Drawer>
+    </Box>
+  );
+};
+`} of={DrawerStories.Example} dark language="tsx" />
+
+### Props
+<ArgTypes of={DrawerStories} />

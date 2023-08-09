@@ -1,0 +1,27 @@
+import { Meta, Story, Canvas, Source, ArgTypes } from '@storybook/blocks';
+import * as SliderStories  from './slider.stories.tsx';
+
+<Meta title="Components/Inputs/Slider"  />
+
+# Slider
+An input where the user selects a value from within a given range.
+
+
+<Canvas>
+  <Story of={SliderStories.Example} />
+</Canvas>
+
+### Usage
+<Source code={`
+import React from "react";
+import { Slider, SliderProps } from "@envio-ui/design";
+
+export const Example: React.FC<SliderProps> = () => {
+  return (
+    <Slider />
+  );
+};
+`} dark language="tsx" />
+
+### Props
+<ArgTypes of={SliderStories.Example} />

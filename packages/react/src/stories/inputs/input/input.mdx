@@ -1,0 +1,107 @@
+import { Meta, Story, Canvas, Source, ArgTypes } from '@storybook/blocks';
+import * as InputStories  from './input.stories.tsx';
+
+<Meta title="Components/Inputs/Input"  />
+
+# Input
+An Input is a form field that a user can type a line of text into.
+
+<b>Input</b> can have a placeholder, a default (initial) value, a label and a description.
+
+~~~
+~~~
+### Usage
+#### Simple
+<Canvas>
+    <Story of={InputStories.Simple} />
+</Canvas>
+<Source
+    code={`
+import React from "react";
+import { Input, InputProps } from "@envio-ui/design";
+
+export const Example: React.FC<InputProps> = () => {
+    const [value, setValue] = React.useState<string>('');
+
+    return (
+        <Input
+            label=""
+            required
+            value={value}
+            onChange={(e) => setValue(e?.target?.value)}
+        />
+    );
+};
+    `}
+
+    dark
+    language="tsx"
+/>
+
+#### Advance
+<Canvas>
+    <Story of={InputStories.Advance} />
+</Canvas>
+<Source
+    code={`
+import React from "react";
+import { Input, InputProps } from "@envio-ui/design";
+import { IconAlertCircle } from "@envio-ui/icons";
+
+export const Example: React.FC<InputProps> = () => {
+    const [value, setValue] = React.useState<string>('');
+
+    return (
+        <Input
+            label="Insert label here"
+            _prefix="_prefix"
+            _surfix={IconAlertCircle}
+            required
+            value={value}
+            onChange={(e) => setValue(e?.target?.value)}
+        />
+    );
+};
+    `}
+
+    dark
+    language="tsx"
+/>
+
+
+#### With Validation
+<Canvas>
+    <Story of={InputStories.Validation} />
+</Canvas>
+<Source
+    code={`
+import React from "react";
+import { Input, InputProps } from "@envio-ui/design";
+import { IconAlertCircle } from "@envio-ui/icons";
+
+export const Example: React.FC<InputProps> = () => {
+    const [value, setValue] = React.useState<string>('');
+
+    return (
+        <Input
+            label="Insert label here"
+            _prefix="_prefix"
+            _surfix={IconAlertCircle}
+            required
+            value={value}
+            onChange={(e) => setValue(e?.target?.value)}
+            error="error message is here"
+            hint='insert hint here'
+        />
+    );
+};
+    `}
+
+    dark
+    language="tsx"
+/>
+
+
+
+### Props
+<ArgTypes of={InputStories.Simple} sort="alpha" />

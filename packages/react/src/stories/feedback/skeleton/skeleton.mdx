@@ -1,0 +1,24 @@
+import { Meta, Story, Canvas, Source, ArgTypes } from '@storybook/blocks';
+import * as SkeletonStories  from './skeleton.stories.tsx';
+
+<Meta title="Components/Feedback/Skeleton"  />
+
+# Skeleton
+<Canvas>
+  <Story of={SkeletonStories.Example} />
+</Canvas>
+
+### Usage
+<Source code={`
+import React from "react";
+import { Skeleton, SkeletonProps } from "@envio-ui/design";
+
+export const Example: React.FC<SkeletonProps> = () => {
+  return (
+    <Skeleton size={24} type={"line"} numberOfLines={1} />
+  );
+};
+`} dark language="tsx" />
+
+### Props
+<ArgTypes of={SkeletonStories.Example} />

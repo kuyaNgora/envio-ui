@@ -1,0 +1,86 @@
+import { Meta, Story, Canvas, Source, ArgTypes } from '@storybook/blocks';
+import * as ModalStories  from './modal.stories.tsx';
+
+<Meta title="Components/Utils/Modal"  />
+
+# Modal
+A window overlaid on either the primary window or another dialog window, rendering the content underneath inert.
+
+<Canvas>
+  <Story of={ModalStories.Example} />
+</Canvas>
+
+
+### Usage
+<Source code={`
+import React from "react";
+import { Box, Button, Heading, Modal, Stack, Text } from "@envio-ui/design";
+
+export const Example: React.FC = () => {
+  const [isOpen, setIsOpen] = React.useState(false);
+
+  return (
+    <Box p="md">
+      <Text as="p">Click the button below to open the modal.</Text>
+      <Button variant="primary" size="lg" onClick={() => setIsOpen(!isOpen)}>
+        Toggle Modal
+      </Button>
+
+      <Modal
+        labelledById="stories-title"
+        isOpen={isOpen}
+        onClose={() => setIsOpen(false)}
+      >
+        <Modal.Header
+          closeButton
+          onClose={() => setIsOpen(false)}
+          size="sm"
+          divider
+          title={
+            <Heading scale="xxs" id="stories-title" textAlign="center">
+              Title
+            </Heading>
+          }
+        />
+
+        <Modal.Body>
+          <Stack textAlign="center">
+            <Text scale={"sm"}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </Text>
+          </Stack>
+        </Modal.Body>
+
+        <Modal.Footer
+          size="lg"
+          caption="lorem ipsum"
+          divider
+          actions={
+            <Stack direction="horizontal" spacing="xs" flex={1}>
+              <Button block size="md" onClick={() => setIsOpen(false)}>
+                Close
+              </Button>
+              <Button block variant="primary" size="md">
+                Confirm
+              </Button>
+            </Stack>
+          }
+        />
+      </Modal>
+    </Box>
+  );
+};
+`} of={ModalStories.Example} dark language="tsx" />
+
+### Props
+#### Modal
+<ArgTypes of={ModalStories} exclude={["size", "title", "centerTitle", "backButton", "actions", "closeButton", "divider"]}  />
+
+#### Modal.Header
+<ArgTypes of={ModalStories} exclude={["isOpen", "noBackdrop", "backdropBlur", "disableOverlayClick", "enableFocusTrap", "labelledById", "maxWidth", "width", "maxHeight", "height", "overflow", "fluid", "caption"]} />
+
+#### Modal.Body
+<ArgTypes of={ModalStories} exclude={["size", "title", "centerTitle", "backButton", "actions", "closeButton", "divider", "isOpen", "noBackdrop", "backdropBlur", "disableOverlayClick", "enableFocusTrap", "labelledById", "maxWidth", "width", "maxHeight", "height", "overflow", "fluid", "caption", "onClose"]}  />
+
+#### Modal.Footer
+<ArgTypes of={ModalStories} exclude={["isOpen", "noBackdrop", "backdropBlur", "disableOverlayClick", "enableFocusTrap", "labelledById", "maxWidth", "width", "maxHeight", "height", "overflow", "onClose", "backButton", "centerTitle", "closeButton", "title"]} />

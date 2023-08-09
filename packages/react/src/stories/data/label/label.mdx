@@ -1,0 +1,26 @@
+import { Meta, Story, Canvas, Source, ArgTypes } from '@storybook/blocks';
+import * as LabelStories  from './label.stories.tsx';
+
+<Meta title="Components/Data & Display/Label"  />
+
+# Label
+<Canvas>
+  <Story of={LabelStories.Example} />
+</Canvas>
+
+### Usage
+<Source code={`
+import React from "react";
+import { Label, LabelProps } from "@envio-ui/design";
+
+export const Example: React.FC<LabelProps> = () => {
+  return (
+    <Label variant="primary" >
+        label
+    </Label>
+  );
+};
+`} dark language="tsx" />
+
+### Props
+<ArgTypes of={LabelStories} />

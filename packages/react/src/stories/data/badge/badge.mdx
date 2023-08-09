@@ -1,0 +1,24 @@
+import { Meta, Story, Canvas, Source, ArgTypes } from '@storybook/blocks';
+import * as BadgeStories  from './badge.stories.tsx';
+
+<Meta title="Components/Data & Display/Badge"  />
+
+# Bagde
+<Canvas>
+  <Story of={BadgeStories.Example} />
+</Canvas>
+
+### Usage
+<Source code={`
+import React from "react";
+import { Badge, BadgeProps } from "@envio-ui/design";
+
+export const Example: React.FC<BadgeProps> = () => {
+  return (
+    <Badge value={0} />
+  );
+};
+`} dark language="tsx" />
+
+### Props
+<ArgTypes of={BadgeStories} />

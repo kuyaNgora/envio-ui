@@ -1,0 +1,52 @@
+import { Meta, Story, Canvas, Source, ArgTypes } from '@storybook/blocks';
+import * as RadioStories  from './radio.stories.tsx';
+
+<Meta title="Components/Inputs/Radio"  />
+
+# Radio
+A set of checkable buttons—known as radio buttons—where no more than one of the buttons can be checked at a time.
+
+
+### Usage
+<Canvas>
+    <Story of={RadioStories.Example} />
+</Canvas>
+
+<Source code={`
+import React from "react";
+import { Radio, RadioProps } from "@envio-ui/design";
+
+export const Example: React.FC<RadioProps> = () => {
+  const [value, setValue] = React.useState<string>("1")
+
+  return (
+    <Radio.Group defaultValue={value}>
+      <Radio.Item
+        label="label 1"
+        value="1"
+        onChange={() => setValue("1")}
+      />
+      <Radio.Item
+        label="label 2"
+        value="2"
+        onChange={() => setValue("2")}
+      />
+      <Radio.Item
+        label="label 3"
+        value="3"
+        onChange={() => setValue("3")}
+      />
+    </Radio.Group>
+  );
+};
+`}
+dark
+language="tsx"
+/>
+
+### Props
+#### Radio.Group
+<ArgTypes of={RadioStories.Example} exclude={["label", "value", "disabled", "onChange"]} sort="alpha" />
+
+#### Radio.Item
+<ArgTypes of={RadioStories.Example} exclude={["defaultValue"]} sort="alpha" />

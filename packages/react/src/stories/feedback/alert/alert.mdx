@@ -1,0 +1,30 @@
+import { Meta, Story, Canvas, Source, ArgTypes } from '@storybook/blocks';
+import * as AlertStories  from './alert.stories.tsx';
+
+<Meta title="Components/Feedback/Alert"  />
+
+# Alert
+<Canvas>
+  <Story of={AlertStories.Example} />
+</Canvas>
+
+### Usage
+<Source code={`
+import React from "react";
+import { Alert, AlertProps } from "@envio-ui/design";
+
+export const Example: React.FC<AlertProps> = () => {
+  return (
+    <Alert
+      variant="default"
+      message="Insert information here"
+      leftIcon
+      leftIconSize={25}
+      closeButton
+    />
+  );
+};
+`} of={AlertStories.Example} dark language="tsx" />
+
+### Props
+<ArgTypes of={AlertStories} />

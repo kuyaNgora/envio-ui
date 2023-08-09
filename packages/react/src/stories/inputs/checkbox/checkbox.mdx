@@ -1,0 +1,35 @@
+import { Meta, Story, Canvas, Source, ArgTypes } from '@storybook/blocks';
+import * as CheckboxStories  from './checkbox.stories.tsx';
+
+<Meta title="Components/Inputs/Checkbox"  />
+
+# Checkbox
+A control that allows the user to toggle between checked and not checked.
+
+<Canvas>
+  <Story of={CheckboxStories.Example} />
+</Canvas>
+
+### Usage
+<Source code={`
+import React from "react";
+import { Checkbox, CheckboxProps } from "@envio-ui/design";
+
+export const Example: React.FC<CheckboxProps> = () => {
+  const [value, setValue] = React.useState<boolean>(true);
+
+  return (
+    <Checkbox
+      label="Place label here"
+      value={value}
+      onChange={() => {
+        setValue(!value);
+      }}
+    />
+  );
+};
+`} of={CheckboxStories.Example} dark language="tsx" />
+
+### Props
+
+<ArgTypes of={CheckboxStories.Example} sort="alpha"/>

@@ -1,0 +1,56 @@
+import { Meta, Story, Canvas, Source, ArgTypes } from '@storybook/blocks';
+import * as UploaderStories  from './uploader.stories.tsx';
+
+<Meta title="Components/Utils/Uploader"  />
+
+# Uploader
+<Canvas>
+    <Story of={UploaderStories.Example} />
+</Canvas>
+
+### Usage
+<Source code={`
+import React from "react";
+import { Stack, Uploader } from "@envio-ui/design";
+
+export const Example: React.FC = () => {
+  const [picture, setPicture] = React.useState<any[]>([]);
+
+  // file handler (images)
+  const $handleUpload = async (blob: Array<File>) => {
+    Array.from(blob).forEach(async function (data) {
+      const reader = new FileReader();
+      reader?.readAsDataURL(data);
+
+      reader.onload = async function () {
+        setPicture(p => [...p, reader?.result]);
+      };
+    });
+  };
+
+  // remove handler
+  const $handleRemove = async (i: number) => {
+    const newImg = [...picture];
+    newImg.splice(i, 1);
+    setPicture(newImg);
+  };
+
+  return (
+    <Stack direction="horizontal" spacing="lg">
+      <Uploader.Image
+        onChange={e => {
+          $handleUpload(e.target.files);
+        }}
+        type="image/png, image/jpeg"
+      />
+      <Uploader.Result data={picture} onRemove={$handleRemove} />
+    </Stack>
+  );
+};
+`} of={UploaderStories.Example} dark language="tsx" />
+
+### Props
+#### Uploader.Image
+<ArgTypes of={UploaderStories.Example} exclude={["data", "onRemove"]} sort="alpha"/>
+#### Uploader.Result
+<ArgTypes of={UploaderStories.Example} exclude={["onChange", "type", "disabled"]} sort="alpha"/>
