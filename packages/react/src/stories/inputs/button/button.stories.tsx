@@ -1,4 +1,4 @@
-import { IconEdit } from "@envio-ui/icons";
+import { Edit } from "@envio-ui/icons";
 import { StoryFn } from "@storybook/react";
 import React from "react";
 import { Button, ButtonProps } from "../../../components";
@@ -208,7 +208,7 @@ Example.args = {
 export const WithIcon: StoryFn<ButtonProps> = Template.bind({});
 WithIcon.args = {
   ...Example.args,
-  icon: IconEdit,
+  icon: Edit,
   iconPosition: "left",
   iconSize: 24,
 };
@@ -217,7 +217,7 @@ export const IconOnly: StoryFn<ButtonProps> = Template.bind({});
 IconOnly.args = {
   ...Example.args,
   children: "",
-  icon: IconEdit,
+  icon: Edit,
   iconPosition: "left",
   iconSize: 24,
 };

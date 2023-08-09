@@ -1,6 +1,6 @@
 import React from "react";
 import * as DropdownPrimitive from "@radix-ui/react-dropdown-menu";
-import { IconChevronRightOutline } from "@envio-ui/icons";
+import { ChevronRightOutline } from "@envio-ui/icons";
 import { contentStyle, itemStyle } from "../utils/styled";
 
 export interface SubProps extends DropdownPrimitive.DropdownMenuSubProps {
@@ -27,7 +27,7 @@ const SubTrigger: React.FC<SubTriggerProps> = ({
     <SubTriggerDiv {...rest}>
       {children}
       <div className="right-icon">
-        <IconChevronRightOutline size={15} fill="currentColor" />
+        <ChevronRightOutline size={15} fill="currentColor" />
       </div>
     </SubTriggerDiv>
   );

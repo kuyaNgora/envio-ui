@@ -1,6 +1,6 @@
 import React from "react";
 import * as DropdownPrimitive from "@radix-ui/react-dropdown-menu";
-import { IconCheckOutline } from "@envio-ui/icons";
+import { CheckOutline } from "@envio-ui/icons";
 import { itemStyle } from "../utils/styled";
 import { ItemIndicator } from "./indicator";
 
@@ -20,7 +20,7 @@ const CheckboxItem: React.FC<CheckboxItemProps> = ({
   return (
     <CheckboxItemCard {...rest}>
       <ItemIndicator>
-        <IconCheckOutline size={15} fill="currentColor" />
+        <CheckOutline size={15} fill="currentColor" />
       </ItemIndicator>
       {children}
     </CheckboxItemCard>

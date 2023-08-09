@@ -1,8 +1,8 @@
-export { default as IconArrowCircleDown } from "./IconArrowCircleDown";
-export { default as IconArrowCircleLeft } from "./IconArrowCircleLeft";
-export { default as IconArrowCircleRight } from "./IconArrowCircleRight";
-export { default as IconArrowCircleUp } from "./IconArrowCircleUp";
-export { default as IconCarretDown } from "./IconCarretDown";
-export { default as IconCarretLeft } from "./IconCarretLeft";
-export { default as IconCarretRight } from "./IconCarretRight";
-export { default as IconCarretUp } from "./IconCarretUp";
+export { default as ArrowCircleDown } from "./IconArrowCircleDown";
+export { default as ArrowCircleLeft } from "./IconArrowCircleLeft";
+export { default as ArrowCircleRight } from "./IconArrowCircleRight";
+export { default as ArrowCircleUp } from "./IconArrowCircleUp";
+export { default as CarretDown } from "./IconCarretDown";
+export { default as CarretLeft } from "./IconCarretLeft";
+export { default as CarretRight } from "./IconCarretRight";
+export { default as CarretUp } from "./IconCarretUp";

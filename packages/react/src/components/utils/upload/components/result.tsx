@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { IconCircleXmark } from "@envio-ui/icons";
+import { CircleXmark } from "@envio-ui/icons";
 import { useComponentStyles } from "../../../../system";
 
 export interface ResultProps {
@@ -50,7 +50,7 @@ const Result: React.FC<ResultProps> = ({
           {e?.map((img: string, id: number) => (
             <Wrapper id={`${id}`}>
               <Remove onClick={() => onRemove && onRemove(id)}>
-                <IconCircleXmark size={20} fill="#D63939" />
+                <CircleXmark size={20} fill="#D63939" />
               </Remove>
               <img src={img} alt="" style={sx} />
             </Wrapper>

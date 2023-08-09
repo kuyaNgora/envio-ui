@@ -1,4 +1,4 @@
-export { default as IconLock } from "./IconLock";
-export { default as IconShield } from "./IconShield";
-export { default as IconShieldSlash } from "./IconShieldSlash";
-export { default as IconUnlock } from "./IconUnlock";
+export { default as Lock } from "./IconLock";
+export { default as Shield } from "./IconShield";
+export { default as ShieldSlash } from "./IconShieldSlash";
+export { default as Unlock } from "./IconUnlock";

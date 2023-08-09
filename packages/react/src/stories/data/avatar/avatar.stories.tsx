@@ -1,6 +1,6 @@
 import { StoryFn } from "@storybook/react";
 import React from "react";
-import { IconPerson } from "@envio-ui/icons";
+import { Person } from "@envio-ui/icons";
 import { Avatar, AvatarProps, Box } from "../../../components";
 
 export default {
@@ -74,7 +74,7 @@ WithImage.args = {
 };
 
 export const WithIcons: StoryFn<AvatarProps> = args => (
-  <Avatar icon={IconPerson} {...args} />
+  <Avatar icon={Person} {...args} />
 );
 WithIcons.args = {
   size: 50,

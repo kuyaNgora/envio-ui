@@ -1,4 +1,4 @@
-export { default as IconLockOutline } from "./IconLockOutline";
-export { default as IconShieldOutline } from "./IconShieldOutline";
-export { default as IconShieldSlashOutline } from "./IconShieldSlashOutline";
-export { default as IconUnlockOutline } from "./IconUnlockOutline";
+export { default as LockOutline } from "./IconLockOutline";
+export { default as ShieldOutline } from "./IconShieldOutline";
+export { default as ShieldSlashOutline } from "./IconShieldSlashOutline";
+export { default as UnlockOutline } from "./IconUnlockOutline";

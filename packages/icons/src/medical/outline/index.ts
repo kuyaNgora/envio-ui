@@ -1,6 +1,6 @@
-export { default as IconHeightScaleOutline } from "./IconHeightScaleOutline";
-export { default as IconPulseOutline } from "./IconPulseOutline";
-export { default as IconThermometerMinOutline } from "./IconThermometerMinOutline";
-export { default as IconThermometerOutline } from "./IconThermometerOutline";
-export { default as IconThermometerPlusOutline } from "./IconThermometerPlusOutline";
-export { default as IconWeightScaleOutline } from "./IconWeightScaleOutline";
+export { default as HeightScaleOutline } from "./IconHeightScaleOutline";
+export { default as PulseOutline } from "./IconPulseOutline";
+export { default as ThermometerMinOutline } from "./IconThermometerMinOutline";
+export { default as ThermometerOutline } from "./IconThermometerOutline";
+export { default as ThermometerPlusOutline } from "./IconThermometerPlusOutline";
+export { default as WeightScaleOutline } from "./IconWeightScaleOutline";

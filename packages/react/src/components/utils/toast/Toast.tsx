@@ -1,10 +1,10 @@
 import { foundations } from "@envio-ui/core";
 import {
-  IconAlertTriangleOutline,
-  IconCheckCircle2Outline,
-  IconCircleXmarkOutline,
-  IconInfoOutline,
-  IconXmarkOutline,
+  AlertTriangleOutline,
+  CheckCircle2Outline,
+  CircleXmarkOutline,
+  InfoOutline,
+  XmarkOutline,
 } from "@envio-ui/icons";
 import React from "react";
 import { Transition } from "react-transition-group";
@@ -114,24 +114,24 @@ function defaultIcon(variant: ToastVariants) {
   const icons = {
     default: null,
     error: (
-      <IconCircleXmarkOutline
+      <CircleXmarkOutline
         aria-hidden
         fill={foundations?.colors?.red09}
         size={24}
       />
     ),
     success: (
-      <IconCheckCircle2Outline
+      <CheckCircle2Outline
         aria-hidden
         fill={foundations?.colors?.success}
         size={24}
       />
     ),
     info: (
-      <IconInfoOutline aria-hidden fill={foundations?.colors?.info} size={24} />
+      <InfoOutline aria-hidden fill={foundations?.colors?.info} size={24} />
     ),
     warning: (
-      <IconAlertTriangleOutline
+      <AlertTriangleOutline
         aria-hidden
         fill={foundations?.colors?.warning}
         size={24}
@@ -282,7 +282,7 @@ const Toast: React.FC<ToastProps> = ({
                   sx={toastCloseButtonStyles}
                   onClick={() => close()}
                 >
-                  <IconXmarkOutline aria-hidden fill="red" size={16} />
+                  <XmarkOutline aria-hidden fill="red" size={16} />
                 </UnstyledButton>
               </Box>
             )}

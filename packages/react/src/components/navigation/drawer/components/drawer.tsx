@@ -1,7 +1,7 @@
 import React from "react";
 import type { CSSProperties } from "styled-components";
 import styled from "styled-components";
-import { IconXmarkOutline } from "@envio-ui/icons";
+import { XmarkOutline } from "@envio-ui/icons";
 
 export interface DrawerProps {
   open: boolean;
@@ -175,7 +175,7 @@ const Drawer: React.FC<DrawerProps> = ({
             role="presentation"
             onClick={onClose}
           >
-            <IconXmarkOutline size={20} fill={"#000"} />
+            <XmarkOutline size={20} fill={"#000"} />
           </div>
         </div>
         {children}

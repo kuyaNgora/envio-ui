@@ -1,56 +1,42 @@
 import React from "react";
-import { Preview } from '@storybook/react';
+import { Preview } from "@storybook/react";
 import { EnvioProvider } from "../src";
 
 const preview: Preview = {
   parameters: {
     actions: { argTypesRegex: "^on[A-Z].*" },
     backgrounds: {
-    default: "base",
-    values: [
-      {
-        name: "base",
-        value: "#fff",
+      default: "base",
+      values: [
+        {
+          name: "base",
+          value: "#fff",
+        },
+        {
+          name: "dark",
+          value: "#b6b2b2",
+        },
+      ],
+    },
+    options: {
+      storySort: {
+        order: [
+          "Docs",
+          ["Introduction", "Installation"],
+          "Getting Started",
+          ["Usage", "Provider"],
+          "Components",
+        ],
       },
-      {
-        name: "dark",
-        value: "#b6b2b2",
-      },
-    ],
-  },
+    },
   },
   decorators: [
-    (Story) => (
+    Story => (
       <EnvioProvider>
         <Story />
       </EnvioProvider>
-    )
-  ]
-}
+    ),
+  ],
+};
 
 export default preview;
-
-// export const parameters = {
-//   actions: { argTypesRegex: "^on[A-Z].*" },
-//   backgrounds: {
-//     default: "base",
-//     values: [
-//       {
-//         name: "base",
-//         value: "#fff",
-//       },
-//       {
-//         name: "dark",
-//         value: "#b6b2b2",
-//       },
-//     ],
-//   },
-// };
-
-// export const decorators = [
-//   Story => (
-//     <EnvioProvider>
-//       <Story />
-//     </EnvioProvider>
-//   ),
-// ];

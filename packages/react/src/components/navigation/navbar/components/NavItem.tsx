@@ -1,4 +1,4 @@
-import { IconChevronDownOutline } from "@envio-ui/icons";
+import { ChevronDownOutline } from "@envio-ui/icons";
 import * as NavigationPrimitive from "@radix-ui/react-navigation-menu";
 import React from "react";
 import NavContent from "./NavContent";
@@ -14,7 +14,7 @@ interface NavbarItemProps extends NavigationPrimitive.NavigationMenuItemProps {
 }
 
 const Trigger = triggerStyle(NavigationPrimitive.Trigger);
-const Carret = carretStyle(IconChevronDownOutline);
+const Carret = carretStyle(ChevronDownOutline);
 const Item = itemStyle(NavigationPrimitive.Item);
 const Link = triggerStyle(NavigationPrimitive.Link);
 

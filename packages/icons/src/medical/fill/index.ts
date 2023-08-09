@@ -1,4 +1,4 @@
-export { default as IconThermometer } from "./IconThermometer";
-export { default as IconThermometerMin } from "./IconThermometerMin";
-export { default as IconThermometerPlus } from "./IconThermometerPlus";
-export { default as IconWeightScale } from "./IconWeightScale";
+export { default as Thermometer } from "./IconThermometer";
+export { default as ThermometerMin } from "./IconThermometerMin";
+export { default as ThermometerPlus } from "./IconThermometerPlus";
+export { default as WeightScale } from "./IconWeightScale";

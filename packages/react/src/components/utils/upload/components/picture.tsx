@@ -1,5 +1,5 @@
 import React from "react";
-import { IconUploadOutline } from "@envio-ui/icons";
+import { UploadOutline } from "@envio-ui/icons";
 import { useComponentStyles } from "../../../../system";
 import UnstyledButtonUpload from "./button";
 
@@ -27,7 +27,7 @@ const Picture = React.forwardRef<HTMLInputElement, PictureProps>(
           onChange={onChange}
         />
         <UnstyledButtonUpload sx={sx} onClick={() => refspod?.current?.click()}>
-          <IconUploadOutline size={25} fill="currentColor" />
+          <UploadOutline size={25} fill="currentColor" />
           <div className="uploader__text">Upload</div>
         </UnstyledButtonUpload>
       </div>

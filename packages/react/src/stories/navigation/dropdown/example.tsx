@@ -1,5 +1,5 @@
 import React from "react";
-import { IconMenu2Outline } from "@envio-ui/icons";
+import { Menu2Outline } from "@envio-ui/icons";
 import { Dropdown, Button } from "../../../components";
 
 export const DropdownExample = () => {
@@ -10,12 +10,7 @@ export const DropdownExample = () => {
   return (
     <Dropdown>
       <Dropdown.Trigger asChild>
-        <Button
-          icon={IconMenu2Outline}
-          iconSize={20}
-          size="sm"
-          variant="primary"
-        />
+        <Button icon={Menu2Outline} iconSize={20} size="sm" variant="primary" />
       </Dropdown.Trigger>
 
       <Dropdown.Portal>

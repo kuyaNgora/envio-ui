@@ -1,4 +1,4 @@
-import { IconXmarkOutline } from "@envio-ui/icons";
+import { XmarkOutline } from "@envio-ui/icons";
 import * as React from "react";
 import { useComponentStyles } from "../../../../system";
 import { Box, BoxProps } from "../../../layout";
@@ -70,7 +70,7 @@ const ModalHeader: React.FC<ModalHeaderProps> = ({
               }}
               onClick={onClose}
             >
-              <IconXmarkOutline aria-hidden size={24} fill="currentColor" />
+              <XmarkOutline aria-hidden size={24} fill="currentColor" />
             </UnstyledButton>
           </Box>
         )}

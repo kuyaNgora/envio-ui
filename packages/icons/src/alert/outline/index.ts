@@ -1,8 +1,8 @@
-export { default as IconAlertCircleOutline } from "./IconAlertCircleOutline";
-export { default as IconAlertTriangleOutline } from "./IconAlertTriangleOutline";
-export { default as IconBellOutline } from "./IconBellOutline";
-export { default as IconBellSlashOutline } from "./IconBellSlashOutline";
-export { default as IconInfoOutline } from "./IconInfoOutline";
-export { default as IconQuestionCircleOutline } from "./IconQuestionCircleOutline";
-export { default as IconQuestionOutline } from "./IconQuestionOutline";
-export { default as IconStopwatchOutline } from "./IconStopwatchOutline";
+export { default as AlertCircleOutline } from "./IconAlertCircleOutline";
+export { default as AlertTriangleOutline } from "./IconAlertTriangleOutline";
+export { default as BellOutline } from "./IconBellOutline";
+export { default as BellSlashOutline } from "./IconBellSlashOutline";
+export { default as InfoOutline } from "./IconInfoOutline";
+export { default as QuestionCircleOutline } from "./IconQuestionCircleOutline";
+export { default as QuestionOutline } from "./IconQuestionOutline";
+export { default as StopwatchOutline } from "./IconStopwatchOutline";

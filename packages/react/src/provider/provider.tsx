@@ -6,11 +6,11 @@ import { Theme, theme as defaultTheme } from "../themes";
 import injectGlobalStyles from "./globalStyles";
 
 export interface EnvioProviderProps {
+  children: React.ReactNode;
   /**
    * If you want to extend the global styles set to `true` and inject them
    * manually via `injectGlobalStyles`.
    */
-  children: React.ReactNode;
   disableInjection?: boolean;
   /** Custom theme object. */
   theme?: Theme;

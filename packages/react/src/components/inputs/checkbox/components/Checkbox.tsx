@@ -1,4 +1,4 @@
-import { IconCheckOutline } from "@envio-ui/icons";
+import { CheckOutline } from "@envio-ui/icons";
 import * as CheckboxPrimitive from "@radix-ui/react-checkbox";
 import React from "react";
 import styled from "styled-components";
@@ -100,7 +100,7 @@ const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
           disabled={disabled}
         >
           <Indicator>
-            <IconCheckOutline
+            <CheckOutline
               size={13}
               fill="currentColor"
               style={{ marginTop: -2 }}

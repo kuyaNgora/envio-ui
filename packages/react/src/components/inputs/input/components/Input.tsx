@@ -1,4 +1,4 @@
-import { IconXmarkOutline } from "@envio-ui/icons";
+import { XmarkOutline } from "@envio-ui/icons";
 import React from "react";
 import styled from "styled-components";
 import UnstyledInput from "./UnstyledInput";
@@ -152,7 +152,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
               {...rest}
             />
             {error && (
-              <IconXmarkOutline
+              <XmarkOutline
                 style={{
                   position: "absolute",
                   right: 5,

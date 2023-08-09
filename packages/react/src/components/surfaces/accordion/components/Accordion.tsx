@@ -1,4 +1,4 @@
-import { IconChevronUpOutline } from "@envio-ui/icons";
+import { ChevronUpOutline } from "@envio-ui/icons";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import {
   AccordionMultipleProps,
@@ -43,7 +43,7 @@ const AccordionTrigger: React.FC<AccordionPrimitive.AccordionTriggerProps> = ({
   );
 };
 
-const AccordionChevron = styled(IconChevronUpOutline)`
+const AccordionChevron = styled(ChevronUpOutline)`
   transition: transform 300ms;
   [data-state="open"] & {
     transform: rotate(180deg);

@@ -1,7 +1,7 @@
-export { default as IconBehance } from "./IconBehance";
-export { default as IconFacebook } from "./IconFacebook";
-export { default as IconGithub } from "./IconGithub";
-export { default as IconGoogle } from "./IconGoogle";
-export { default as IconLinkedin } from "./IconLinkedin";
-export { default as IconNpm } from "./IconNpm";
-export { default as IconTwitter } from "./IconTwitter";
+export { default as Behance } from "./IconBehance";
+export { default as Facebook } from "./IconFacebook";
+export { default as Github } from "./IconGithub";
+export { default as Google } from "./IconGoogle";
+export { default as Linkedin } from "./IconLinkedin";
+export { default as Npm } from "./IconNpm";
+export { default as Twitter } from "./IconTwitter";

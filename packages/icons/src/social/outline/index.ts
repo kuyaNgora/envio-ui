@@ -1,7 +1,7 @@
-export { default as IconBehanceOutline } from "./IconBehanceOutline";
-export { default as IconFacebookOutline } from "./IconFacebookOutline";
-export { default as IconGithubOutline } from "./IconGithubOutline";
-export { default as IconGoogleOutline } from "./IconGoogleOutline";
-export { default as IconLinkedinOutline } from "./IconLinkedinOutline";
-export { default as IconNpmOutline } from "./IconNpmOutline";
-export { default as IconTwitterOutline } from "./IconTwitterOutline";
+export { default as BehanceOutline } from "./IconBehanceOutline";
+export { default as FacebookOutline } from "./IconFacebookOutline";
+export { default as GithubOutline } from "./IconGithubOutline";
+export { default as GoogleOutline } from "./IconGoogleOutline";
+export { default as LinkedinOutline } from "./IconLinkedinOutline";
+export { default as NpmOutline } from "./IconNpmOutline";
+export { default as TwitterOutline } from "./IconTwitterOutline";

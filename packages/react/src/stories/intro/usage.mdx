@@ -1,0 +1,43 @@
+import { Meta, Story, Canvas, Controls, Source  } from '@storybook/blocks';
+
+<Meta title="Getting Started/Usage"  />
+
+# Usage
+Apply style reset, wrap your app content with `EnvioProvider` and you are ready to go! 🚀
+
+<Source code={
+`
+import React from 'react';
+import App from "./App";
+import {EnvioProvider} from '@react-ui/react';
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  <React.StrictMode>
+    <EnvioProvider>
+      <App />
+    </EnvioProvider>
+  </React.StrictMode>
+);
+`
+} dark />
+
+### Quickstart
+The following code snippet demonstrates a simple app that uses the `Envio UI` Button component:
+
+<Source code={
+`
+import React from 'react';
+import {Button} from '@react-ui/react';
+
+function App() {
+    return <Button variant="primary" size="md"> Hello World </Button>;
+}
+`
+} dark />
+
+### Globals
+Since `Envio UI` components are built to function in isolation, they don't require any kind of globally scoped styles. For a better user experience and developer experience, we recommend adding the following globals to your app.
+
+#### Default font
+`Envio UI` uses the Inter font by default.

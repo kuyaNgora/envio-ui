@@ -1,10 +1,10 @@
 import { foundations } from "@envio-ui/core";
 import {
-  IconAlertCircleOutline,
-  IconCheckCircle2Outline,
-  IconCircleXmarkOutline,
-  IconInfoOutline,
-  IconXmarkOutline,
+  AlertCircleOutline,
+  CheckCircle2Outline,
+  CircleXmarkOutline,
+  InfoOutline,
+  XmarkOutline,
 } from "@envio-ui/icons";
 import React from "react";
 import { useComponentStyles } from "../../../../system";
@@ -34,7 +34,7 @@ export interface AlertProps extends BoxProps {
 function iconVariant(variant: AlertVariant, iconSize: number) {
   const icon = {
     default: (
-      <IconInfoOutline
+      <InfoOutline
         size={iconSize}
         fill={foundations?.colors?.primary}
         style={{
@@ -43,7 +43,7 @@ function iconVariant(variant: AlertVariant, iconSize: number) {
       />
     ),
     primary: (
-      <IconInfoOutline
+      <InfoOutline
         size={iconSize}
         fill={foundations?.colors?.primary}
         style={{
@@ -52,7 +52,7 @@ function iconVariant(variant: AlertVariant, iconSize: number) {
       />
     ),
     danger: (
-      <IconCircleXmarkOutline
+      <CircleXmarkOutline
         size={iconSize}
         fill={foundations?.colors?.danger}
         style={{
@@ -61,7 +61,7 @@ function iconVariant(variant: AlertVariant, iconSize: number) {
       />
     ),
     success: (
-      <IconCheckCircle2Outline
+      <CheckCircle2Outline
         size={iconSize}
         fill={foundations?.colors?.success}
         style={{
@@ -70,7 +70,7 @@ function iconVariant(variant: AlertVariant, iconSize: number) {
       />
     ),
     warning: (
-      <IconAlertCircleOutline
+      <AlertCircleOutline
         size={iconSize}
         fill={foundations?.colors?.warning}
         style={{
@@ -149,7 +149,7 @@ const Alert = React.forwardRef<HTMLDivElement, AlertProps>(
               width: 20,
             }}
             p="xs"
-            icon={IconXmarkOutline}
+            icon={XmarkOutline}
             iconSize={20}
           />
         )

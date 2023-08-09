@@ -1,3 +1,3 @@
-export { default as IconGrid } from "./IconGrid";
-export { default as IconGridRound } from "./IconGridRound";
-export { default as IconHome } from "./IconHome";
+export { default as Grid } from "./IconGrid";
+export { default as GridRound } from "./IconGridRound";
+export { default as Home } from "./IconHome";

@@ -46,7 +46,7 @@ export const Example: React.FC<InputProps> = () => {
     code={`
 import React from "react";
 import { Input, InputProps } from "@envio-ui/design";
-import { IconAlertCircle } from "@envio-ui/icons";
+import { AlertCircle } from "@envio-ui/icons";
 
 export const Example: React.FC<InputProps> = () => {
     const [value, setValue] = React.useState<string>('');
@@ -55,7 +55,7 @@ export const Example: React.FC<InputProps> = () => {
         <Input
             label="Insert label here"
             _prefix="_prefix"
-            _surfix={IconAlertCircle}
+            _surfix={AlertCircle}
             required
             value={value}
             onChange={(e) => setValue(e?.target?.value)}
@@ -77,7 +77,7 @@ export const Example: React.FC<InputProps> = () => {
     code={`
 import React from "react";
 import { Input, InputProps } from "@envio-ui/design";
-import { IconAlertCircle } from "@envio-ui/icons";
+import { AlertCircle } from "@envio-ui/icons";
 
 export const Example: React.FC<InputProps> = () => {
     const [value, setValue] = React.useState<string>('');
@@ -86,7 +86,7 @@ export const Example: React.FC<InputProps> = () => {
         <Input
             label="Insert label here"
             _prefix="_prefix"
-            _surfix={IconAlertCircle}
+            _surfix={AlertCircle}
             required
             value={value}
             onChange={(e) => setValue(e?.target?.value)}

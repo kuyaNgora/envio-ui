@@ -1,12 +1,12 @@
 /* eslint-disable react/jsx-wrap-multilines */
 import React from "react";
 import {
-  IconBroadcastOutline,
-  IconGlobeOutline,
-  IconHomeOutline,
-  IconPriceTagOutline,
-  IconSlidersOutline,
-  IconTruckOutline,
+  BroadcastOutline,
+  GlobeOutline,
+  HomeOutline,
+  PriceTagOutline,
+  SlidersOutline,
+  TruckOutline,
 } from "@envio-ui/icons";
 import { Button, Navbar, Stack } from "../../../components";
 
@@ -111,13 +111,13 @@ export default {
 const menu = [
   {
     label: "Home",
-    icon: IconHomeOutline,
+    icon: HomeOutline,
     url: "/",
     active: "",
     isDropdown: true,
     child: [
       {
-        icon: IconTruckOutline,
+        icon: TruckOutline,
         label: "Envio digital logistik & supply chain enabler",
         desciption:
           "Platform logistik berbasis cloud yang dapat menampilkan proses rantai pasokan secara komprehensif dan real-time",
@@ -125,7 +125,7 @@ const menu = [
         active: "",
       },
       {
-        icon: IconGlobeOutline,
+        icon: GlobeOutline,
         label: "Supply chain management solution",
         desciption:
           "Membantu dalam mengelola rantai pasokan dari hulu ke hilir dengan tim expert di bidangnya",
@@ -133,7 +133,7 @@ const menu = [
         active: "",
       },
       {
-        icon: IconBroadcastOutline,
+        icon: BroadcastOutline,
         label: "Layanan transportasi",
         desciption:
           "Kelola pemindahan produk dalam jumlah besar dari gudang ke gudang atau ke pelanggan dengan mudah, aman dan fleksibel.",
@@ -141,7 +141,7 @@ const menu = [
         active: "",
       },
       {
-        icon: IconSlidersOutline,
+        icon: SlidersOutline,
         label: "Layanan pergudangan",
         desciption:
           "Kelola stok, pengemasan dan pengiriman barang dengan mudah, aman dan fleksibel sesuai dengan kebutuhan perusahaan.",
@@ -152,7 +152,7 @@ const menu = [
   },
   {
     label: "Product",
-    icon: IconPriceTagOutline,
+    icon: PriceTagOutline,
     url: "/product",
     active: "product",
     disabled: true,
@@ -164,7 +164,7 @@ const menu = [
     isDropdown: true,
     child: [
       {
-        icon: IconTruckOutline,
+        icon: TruckOutline,
         label: "Envio digital logistik & supply chain enabler",
         desciption:
           "Platform logistik berbasis cloud yang dapat menampilkan proses rantai pasokan secara komprehensif dan real-time",
@@ -172,7 +172,7 @@ const menu = [
         active: "",
       },
       {
-        icon: IconGlobeOutline,
+        icon: GlobeOutline,
         label: "Supply chain management solution",
         desciption:
           "Membantu dalam mengelola rantai pasokan dari hulu ke hilir dengan tim expert di bidangnya",
@@ -180,7 +180,7 @@ const menu = [
         active: "",
       },
       {
-        icon: IconBroadcastOutline,
+        icon: BroadcastOutline,
         label: "Layanan transportasi",
         desciption:
           "Kelola pemindahan produk dalam jumlah besar dari gudang ke gudang atau ke pelanggan dengan mudah, aman dan fleksibel.",
@@ -188,7 +188,7 @@ const menu = [
         active: "",
       },
       {
-        icon: IconSlidersOutline,
+        icon: SlidersOutline,
         label: "Layanan pergudangan",
         desciption:
           "Kelola stok, pengemasan dan pengiriman barang dengan mudah, aman dan fleksibel sesuai dengan kebutuhan perusahaan.",

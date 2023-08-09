@@ -1,6 +1,6 @@
 import React from "react";
 import { StoryFn } from "@storybook/react";
-import { IconAlertCircle } from "@envio-ui/icons";
+import { AlertCircle } from "@envio-ui/icons";
 import { Input, InputProps } from "../../../components";
 
 export default {
@@ -124,7 +124,7 @@ export const Advance = Template.bind({});
 Advance.args = {
   label: "Insert label here",
   _prefix: "_prefix",
-  _surfix: IconAlertCircle,
+  _surfix: AlertCircle,
 };
 
 export const Validation = Template.bind({});
@@ -132,7 +132,7 @@ Validation.args = {
   required: true,
   label: "Insert label here",
   _prefix: "_prefix",
-  _surfix: IconAlertCircle,
+  _surfix: AlertCircle,
   error: "error message is here",
   hint: "insert hint here",
 };

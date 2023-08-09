@@ -1,6 +1,6 @@
 import React from "react";
 import * as DropdownPrimitive from "@radix-ui/react-dropdown-menu";
-import { IconCircleDot } from "@envio-ui/icons";
+import { Dot } from "@envio-ui/icons";
 import { ItemIndicator } from "./indicator";
 import { itemStyle } from "../utils/styled";
 
@@ -36,7 +36,7 @@ const RadioItem: React.FC<RadioItemProps> = ({
   return (
     <RadioItemDiv {...rest}>
       <ItemIndicator>
-        <IconCircleDot size={12} fill="currentColor" />
+        <Dot size={12} fill="currentColor" />
       </ItemIndicator>
       {children}
     </RadioItemDiv>
