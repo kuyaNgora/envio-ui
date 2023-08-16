@@ -124,5 +124,6 @@
     "storybook": "7.2.0"
   },
   "readme": "ERROR: No README data found!",
-  "_id": "@envio-ui/react@1.0.3-alpha.0"
+  "_id": "@envio-ui/react@1.0.3-alpha.0",
+  "gitHead": "30e318a5b6d4dd33df0406db1d2e5ebae19f90ac"
 }
