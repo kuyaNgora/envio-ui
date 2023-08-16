@@ -28,11 +28,13 @@ const baseStyle: CSSObject = {
     },
     "&:visited": {
       outline: "none",
-      boxShadow: `0 0 0 4px rgba(var(--nvo-button-outline-rgb), var(--nvo-opacity-outline))`,
+      // boxShadow: `0 0 0 4px rgba(var(--nvo-button-outline-rgb), var(--nvo-opacity-outline))`,
+      boxShadow: `none`,
     },
     "&:focus": {
       outline: "none",
-      boxShadow: `0 0 0 4px rgba(var(--nvo-button-outline-rgb), var(--nvo-opacity-outline))`,
+      // boxShadow: `0 0 0 4px rgba(var(--nvo-button-outline-rgb), var(--nvo-opacity-outline))`,
+      boxShadow: `none !important`,
     },
   },
   "&:disabled": {

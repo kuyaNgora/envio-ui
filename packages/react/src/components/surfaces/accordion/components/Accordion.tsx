@@ -26,7 +26,7 @@ const AccordionItem: React.FC<
   AccordionPrimitive.AccordionItemProps & { style?: CSSObject }
 > = ({ children, disabled, value, style }) => {
   return (
-    <AccordionPrimitive.Item asChild disabled={disabled} value={value}>
+    <AccordionPrimitive.Item disabled={disabled} value={value}>
       <Box sx={{ ...style }}>{children}</Box>
     </AccordionPrimitive.Item>
   );
@@ -69,16 +69,12 @@ const AccordionHeader: React.FC<AccordionHeaderProps> = ({
             minHeight={size === "md" ? 40 : 48}
             display={"flex"}
             flex={1}
-            borderRadius={"lg"}
             justifyContent={"space-between"}
             alignItems={"center"}
             fontSize={16}
             fontWeight={700}
             color="secondary"
             _hover={{ backgroundColor: "greylight03" }}
-            _focus={{
-              boxShadow: `0 0 0 2px rgba(175, 214, 255, 0.7)`,
-            }}
             _focusVisible={{
               outline: "none",
             }}
@@ -96,7 +92,7 @@ const AccordionHeader: React.FC<AccordionHeaderProps> = ({
 
 const slideDown = keyframes`
   from  { height: 0 }
-  to { height: var(--radix-accordion-content-height) },`;
+  to { height: var(--radix-accordion-content-height) }`;
 
 const slideUp = keyframes`
   from { height: var(--radix-accordion-content-height) }
@@ -113,6 +109,7 @@ const BoxContent = styled("div")`
   font-size: 16px;
   font-weight: 400;
   color: #636363;
+
   &[data-state="open"] {
     animation-name: ${slideDown};
     animation-duration: 300ms;

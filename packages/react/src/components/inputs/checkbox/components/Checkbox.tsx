@@ -100,11 +100,7 @@ const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
           disabled={disabled}
         >
           <Indicator>
-            <CheckOutline
-              size={13}
-              fill="currentColor"
-              style={{ marginTop: -2 }}
-            />
+            <CheckOutline size={13} fill="currentColor" />
           </Indicator>
         </Root>
         {renderLabel()}

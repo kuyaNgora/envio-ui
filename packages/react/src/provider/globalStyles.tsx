@@ -8,6 +8,11 @@ const injectGlobalStyles = (
     ${normalize}
 
     :root {
+      --nvo-tooltip-black-transparent: rgba(32, 32, 32, 0.5);
+      --nvo-tooltip-move: 10px;
+      --nvo-tooltip-height: 8px;
+      --nvo-tooltip-shift: calc(-2 * var(--nvo-tooltip-height));
+
       --nvo-blue:  ${p => p.theme.colors.blue09};
       --nvo-red:  ${p => p.theme.colors.red09};
       --nvo-orange:  ${p => p.theme.colors.orange09};
@@ -130,6 +135,23 @@ const injectGlobalStyles = (
     .stepper__indicator {
       &::after{
         content: '';
+      }
+    }
+
+    .coachmark__left,
+    .coachmark__bottom,
+    .coachmark__top,
+    .coachmark__right {
+      &::before {
+        content: '';
+        border-top-width: var(--nvo-tooltip-height);
+        border-left-width: var(--nvo-tooltip-height);
+        border-right-width: var(--nvo-tooltip-height);
+        border-bottom-width: var(--nvo-tooltip-height);
+        border-style: solid;
+        background: transparent;
+        border-color: #fff;
+        position: absolute;
       }
     }
 

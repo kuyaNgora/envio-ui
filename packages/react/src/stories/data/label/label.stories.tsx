@@ -13,6 +13,17 @@ export default {
         },
         defaultValue: { summary: "outline-secondary" },
       },
+      options: [
+        "primary",
+        "secondary",
+        "success",
+        "warning",
+        "outline-primary",
+        "outline-secondary",
+        "outline-success",
+        "outline-warning",
+      ],
+      control: "select",
     },
     className: {
       table: {

@@ -43,18 +43,13 @@ const Wrap = React.forwardRef<HTMLDivElement, WrapProps>(
         <Box
           as="ul"
           sx={{
-            "--envio-wrap-spacing": spacing,
-            "--wrap-spacing": "calc(var(--envio-wrap-spacing) / 2)",
             display: "flex",
             flexWrap: "wrap",
             alignItems,
             justifyContent,
             listStyleType: "none",
             padding: 0,
-            margin: "calc(var(--wrap-spacing) * -1)",
-            "& > :not([hidden])": {
-              margin: "var(--wrap-spacing)",
-            },
+            gap: spacing,
           }}
         >
           {childrenToRender}

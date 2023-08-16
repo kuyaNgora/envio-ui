@@ -1,0 +1,78 @@
+import { Meta, Story, Canvas, Source, ArgTypes } from '@storybook/blocks';
+import * as CoachmarkStories  from './coachmark.stories.tsx';
+
+<Meta title="Components/Utils/Coachmark"  />
+
+# Coachmark
+
+<Canvas of={CoachmarkStories.Example} />
+
+### Usage
+1. Create and Assign ref (hooks version), it also works for class version.
+
+<Source code={`
+const ref1 = useRef(null);
+const ref2 = useRef(null);
+// assign it to div
+<h1 ref={ref1}>Coach Mark</h1>
+<p ref={ref2}>Any ref based element</p>
+`} dark />
+
+2. Create state and write your next/prev/skip handlers.
+
+<Source code={`
+const [activatedNumber, setActivateNumber] = React.useState<number>(0);
+setActivateNumber(activatedNumber + 1)
+setActivateNumber(activatedNumber - 1)
+`} dark />
+
+
+3. You control the flow, you control the components it will render.
+
+<Source code={`
+const coachList: Array<CoachProps> = [
+    {
+      activate: activatedNumber === 0,
+      component: (
+        <div>
+          <Heading scale="xxs">Title</Heading>
+          <Text scale="sm">
+            Interactive guide through the features a user needs in order to
+            activate.
+          </Text>
+        </div>
+      ),
+      reference: ref1,
+      tooltip: {
+        position: "bottom",
+        footer: {
+          index: 1,
+          length: 2,
+        },
+        next: () => setActivateNumber(activatedNumber + 1),
+        prev: () => setActivateNumber(activatedNumber - 1),
+      },
+    },
+    {
+      activate: activatedNumber === 1,
+      component: <div>I can be long. </div>,
+      reference: ref2,
+      tooltip: {
+        position: "top",
+        footer: {
+          index: 2,
+          length: 2,
+        },
+        next: () => setActivateNumber(activatedNumber + 1),
+        prev: () => setActivateNumber(activatedNumber - 1),
+      },
+    },
+]
+`} dark />
+
+4. Just pass the configuration to the coach mark.
+
+<Source code={`
+const coach = coachList[activatedNumber];
+<Coachmark {...coach} />
+`} dark />

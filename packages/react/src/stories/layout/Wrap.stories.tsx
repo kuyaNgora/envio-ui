@@ -19,25 +19,28 @@ export const Example: StoryFn<WrapProps> = ({ spacing }) => {
     <Box width={300}>
       <Wrap spacing={spacing}>
         <Wrap.Item>
-          <Label>label 1</Label>
+          <Label variant="primary">label 1</Label>
         </Wrap.Item>
         <Wrap.Item>
-          <Label>Label 2</Label>
+          <Label variant="secondary">Label 2</Label>
         </Wrap.Item>
         <Wrap.Item>
-          <Label>Label 3</Label>
+          <Label variant="success">Label 3</Label>
         </Wrap.Item>
         <Wrap.Item>
-          <Label>Label 4</Label>
+          <Label variant="warning">Label 4</Label>
         </Wrap.Item>
         <Wrap.Item>
-          <Label>Label 5</Label>
+          <Label variant="outline-primary">Label 5</Label>
         </Wrap.Item>
         <Wrap.Item>
-          <Label>Label 6</Label>
+          <Label variant="outline-secondary">Label 6</Label>
         </Wrap.Item>
         <Wrap.Item>
-          <Label>Label 7</Label>
+          <Label variant="outline-success">Label 7</Label>
+        </Wrap.Item>
+        <Wrap.Item>
+          <Label variant="outline-warning">Label 8</Label>
         </Wrap.Item>
       </Wrap>
     </Box>

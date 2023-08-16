@@ -16,7 +16,8 @@ export const primary = {
       },
       "&:focus": {
         outline: "none",
-        boxShadow: `0 0 0 4px rgba(var(--nvo-button-primary-outline-rgb), var(--nvo-opacity-outline))`,
+        // boxShadow: `0 0 0 4px rgba(var(--nvo-button-primary-outline-rgb), var(--nvo-opacity-outline))`,
+        boxShadow: `none`,
       },
     },
     "&:disabled": {
@@ -43,7 +44,8 @@ export const primary = {
       },
       "&:focus": {
         outline: "none",
-        boxShadow: `0 0 0 4px rgba(var(--nvo-primary-rgb), var(--nvo-opacity-outline))`,
+        // boxShadow: `0 0 0 4px rgba(var(--nvo-primary-rgb), var(--nvo-opacity-outline))`,
+        boxShadow: `none`,
       },
     },
     "&:disabled": {

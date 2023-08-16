@@ -36,7 +36,7 @@ const RadioItem: React.FC<RadioItemProps> = ({
   return (
     <RadioItemDiv {...rest}>
       <ItemIndicator>
-        <Dot size={12} fill="currentColor" />
+        <Dot size={8} fill="currentColor" style={{ marginTop: -2 }} />
       </ItemIndicator>
       {children}
     </RadioItemDiv>

@@ -22,6 +22,8 @@ import switchStyle from "./switch";
 import progress from "./progress";
 import slider from "./slider";
 import uploader from "./uploader";
+import coachmark from "./coachmark";
+import tabs from "./tabs";
 
 const componentStyles = {
   avatar,
@@ -48,6 +50,8 @@ const componentStyles = {
   ...progress,
   ...slider,
   ...uploader,
+  ...coachmark,
+  ...tabs,
 };
 
 export default componentStyles;

@@ -3,9 +3,9 @@ import { Anchor, Box, Card, Heading, Stack, Text } from "../../components";
 import { SystemBlock } from "../../utils/storybook";
 
 export default {
-  title: "Components/Layout/Card",
+  // title: "Components/Layout/Card",
   component: Card,
-  tags: ["autodocs"],
+  // tags: ["autodocs"],
 };
 
 interface ExampleGridProps {

@@ -1,0 +1,71 @@
+import { Meta, Story, Canvas, Source, ArgTypes } from '@storybook/blocks';
+import * as TabsStories  from './tabs.stories.tsx';
+
+<Meta title="Components/Navigation/Tabs"  />
+
+# Drawer
+<Canvas>
+  <Story of={TabsStories.Example} />
+</Canvas>
+
+### Anatomy
+<Source
+    code={
+`<Tabs>
+  <Tabs.Header>
+      <Tabs.Trigger />
+  </Tabs.Header>
+  <Tabs.Content />
+</Tabs>`
+    }
+    dark
+    language="tsx"
+/>
+
+### Usage
+<Source code={`
+import React from "react";
+import { Tabs, Text } from "@envio-ui/design";
+
+export const Example: React.FC = () => {
+  return (
+    <Tabs defaultValue="tab1">
+      <Tabs.Header>
+        <Tabs.Trigger value="tab1">tab 1</Tabs.Trigger>
+        <Tabs.Trigger value="tab2">tab 2</Tabs.Trigger>
+        <Tabs.Trigger value="tab3">tab 3</Tabs.Trigger>
+        <Tabs.Trigger value="tab4">tab 4</Tabs.Trigger>
+        <Tabs.Trigger value="tab5">tab 5</Tabs.Trigger>
+      </Tabs.Header>
+      <Tabs.Content value="tab1">
+        <Text>content tab 1</Text>
+      </Tabs.Content>
+      <Tabs.Content value="tab2">
+        <Text>content tab 2</Text>
+      </Tabs.Content>
+      <Tabs.Content value="tab3">
+        <Text>content tab 3</Text>
+      </Tabs.Content>
+      <Tabs.Content value="tab4">
+        <Text>content tab 4</Text>
+      </Tabs.Content>
+      <Tabs.Content value="tab5">
+        <Text>content tab 5</Text>
+      </Tabs.Content>
+    </Tabs>
+  );
+};
+`} of={TabsStories.Example} dark language="tsx" />
+
+### Props
+#### Tabs
+<ArgTypes of={TabsStories} exclude={["loop", "disabled", "forceMount"]} />
+
+#### Tabs.Header
+<ArgTypes of={TabsStories} exclude={["defaultValue", "value", "onValueChange", "orientation", "dir", "activationMode", "disabled", "forceMount"]} />
+
+#### Tabs.Trigger
+<ArgTypes of={TabsStories} exclude={["defaultValue", "onValueChange", "orientation", "dir", "activationMode", "loop", "forceMount"]} />
+
+#### Tabs.Content
+<ArgTypes of={TabsStories} exclude={["defaultValue", "onValueChange", "orientation", "dir", "activationMode", "disabled", "loop"]} />
