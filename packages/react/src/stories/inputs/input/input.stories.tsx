@@ -98,6 +98,7 @@ const Template: StoryFn<InputProps> = ({
   disabled,
   _prefix,
   _surfix,
+  type,
 }) => {
   const [value, setValue] = React.useState<string>("");
 
@@ -111,6 +112,7 @@ const Template: StoryFn<InputProps> = ({
       _prefix={_prefix}
       _surfix={_surfix}
       value={value}
+      type={type}
       onChange={e => {
         setValue(e?.target?.value);
       }}
@@ -135,4 +137,5 @@ Validation.args = {
   _surfix: AlertCircle,
   error: "error message is here",
   hint: "insert hint here",
+  type: "password",
 };

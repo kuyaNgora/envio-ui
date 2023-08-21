@@ -1,4 +1,4 @@
-import { XmarkOutline } from "@envio-ui/icons";
+import { Eye, EyeSlash, XmarkOutline } from "@envio-ui/icons";
 import React from "react";
 import styled from "styled-components";
 import UnstyledInput from "./UnstyledInput";
@@ -80,10 +80,13 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
       hint,
       _prefix,
       _surfix,
+      type,
       ...rest
     },
     ref
   ) => {
+    const [secured, setSecured] = React.useState("password");
+
     const renderLabel = () => {
       return (
         label && (
@@ -104,14 +107,25 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
     };
 
     const renderPrefix = () => {
-      if (typeof _prefix === "string") {
+      if (_prefix) {
+        if (typeof _prefix === "string") {
+          return (
+            <Prefix>
+              <div className="">{_prefix}</div>
+            </Prefix>
+          );
+        }
+
         return (
           <Prefix>
-            <div className="">{_prefix}</div>
+            {React.createElement(_prefix, {
+              fill: "currentColor",
+              size: 20,
+            })}
           </Prefix>
         );
       }
-      return false;
+      return null;
     };
 
     const renderSurfix = () => {
@@ -141,7 +155,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
         {renderLabel()}
         <Wrapper aria-invalid={!!error}>
           {_prefix && renderPrefix()}
-          <div style={{ position: "relative" }}>
+          <div style={{ position: "relative", width: "100%" }}>
             <UnstyledInput
               ref={ref}
               aria-invalid={!!error}
@@ -150,7 +164,35 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
               borderTopRightRadius={_surfix ? 0 : 4}
               borderBottomRightRadius={_surfix ? 0 : 4}
               {...rest}
+              type={type === "password" ? secured : type}
             />
+            {type === "password" ? (
+              <span
+                style={{
+                  position: "absolute",
+                  right: 0,
+                  marginRight: error ? 25 : 0,
+                  cursor: "pointer",
+                  top: "50%",
+                  transform: "translateY(-50%)",
+                  marginTop: 1.5,
+                }}
+              >
+                {secured === "password" ? (
+                  <Eye
+                    size={20}
+                    fill="#656d77"
+                    onClick={() => setSecured("text")}
+                  />
+                ) : (
+                  <EyeSlash
+                    size={20}
+                    fill="#656d77"
+                    onClick={() => setSecured("password")}
+                  />
+                )}
+              </span>
+            ) : null}
             {error && (
               <XmarkOutline
                 style={{
