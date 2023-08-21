@@ -171,7 +171,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
                 style={{
                   position: "absolute",
                   right: 0,
-                  marginRight: error ? 25 : 0,
+                  marginRight: error ? 25 : 8,
                   cursor: "pointer",
                   top: "50%",
                   transform: "translateY(-50%)",
