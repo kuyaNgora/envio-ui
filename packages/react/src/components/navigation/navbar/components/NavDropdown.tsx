@@ -1,9 +1,7 @@
 import { ChevronDownOutline } from "@envio-ui/icons";
 import * as NavigationPrimitive from "@radix-ui/react-navigation-menu";
 import React from "react";
-import NavContent from "./NavContent";
 import {
-  ChildProps,
   arrowStyle,
   carretStyle,
   indicatorStyle,
@@ -16,7 +14,7 @@ export interface NavDropdownProps
   icon?: React.ComponentType<any>;
   title: string;
   disabled?: boolean;
-  child?: ChildProps[];
+  children?: React.ReactNode;
 }
 
 const Trigger = triggerStyle(NavigationPrimitive.Trigger);
@@ -29,12 +27,13 @@ const NavDropdown: React.FC<NavDropdownProps> = ({
   title,
   icon,
   disabled,
-  child,
+  children,
 }) => {
   const renderIcon = () => {
     return (
       icon && (
-        <div style={{ bottom: -1, position: "relative" }}>
+        // <div style={{ bottom: -1, position: "relative" }}>
+        <div>
           {React.createElement(icon, {
             fill: "currentColor",
             size: 18,
@@ -50,7 +49,7 @@ const NavDropdown: React.FC<NavDropdownProps> = ({
           {renderIcon()}
           {title} <Carret fill="currentColor" size={14} />
         </Trigger>
-        <NavContent menu={child} />
+        {children}
       </Item>
       <Indicator>
         <Arrow />

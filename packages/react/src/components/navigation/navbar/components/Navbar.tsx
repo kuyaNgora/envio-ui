@@ -9,6 +9,7 @@ import {
 } from "./utils";
 import NavDropdown from "./NavDropdown";
 import Nav from "./Nav";
+import NavContent from "./NavContent";
 
 export interface NavbarProps {
   className?: string;
@@ -54,4 +55,5 @@ const Navbar: React.FC<NavbarProps> = ({
 export default Object.assign(Navbar, {
   Nav,
   Dropdown: NavDropdown,
+  Content: NavContent,
 });

@@ -120,32 +120,24 @@ const menu = [
       {
         icon: TruckOutline,
         label: "Envio digital logistik & supply chain enabler",
-        desciption:
-          "Platform logistik berbasis cloud yang dapat menampilkan proses rantai pasokan secara komprehensif dan real-time",
         url: "/",
         active: "",
       },
       {
         icon: GlobeOutline,
         label: "Supply chain management solution",
-        desciption:
-          "Membantu dalam mengelola rantai pasokan dari hulu ke hilir dengan tim expert di bidangnya",
         url: "/",
         active: "",
       },
       {
         icon: BroadcastOutline,
         label: "Layanan transportasi",
-        desciption:
-          "Kelola pemindahan produk dalam jumlah besar dari gudang ke gudang atau ke pelanggan dengan mudah, aman dan fleksibel.",
         url: "/",
         active: "",
       },
       {
         icon: SlidersOutline,
         label: "Layanan pergudangan",
-        desciption:
-          "Kelola stok, pengemasan dan pengiriman barang dengan mudah, aman dan fleksibel sesuai dengan kebutuhan perusahaan.",
         url: "/",
         active: "",
       },
@@ -214,10 +206,17 @@ export const Example: React.FC = () => {
             <Navbar.Dropdown
               key={`nav-${id}`}
               title={nav.label}
-              child={nav.child}
               icon={nav?.icon}
               disabled={nav?.disabled}
-            />
+            >
+              <Navbar.Content>
+                {nav?.child?.map((child, idx) => (
+                  <li key={idx}>
+                    <Navbar.Nav title={child.label} icon={child?.icon} />
+                  </li>
+                ))}
+              </Navbar.Content>
+            </Navbar.Dropdown>
           );
         }
 

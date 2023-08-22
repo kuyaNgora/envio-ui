@@ -12,13 +12,12 @@ import {
 
 const rootStyle = (element: any) => {
   const x = styled(element)`
-    all: unset;
     position: relative;
     display: flex;
     align-items: center;
-    width: 100%;
     z-index: 1;
-    list-style: none;
+    width: fit-content;
+    max-width: 100%;
   `;
 
   return x;
@@ -26,10 +25,8 @@ const rootStyle = (element: any) => {
 
 const listStyle = (element: any) => {
   const x = styled(element)`
-    all: unset;
     display: flex;
     justify-content: center;
-    align-items: center;
     background-color: transparent;
     padding: 4px;
     border-radius: 6px;
@@ -42,7 +39,6 @@ const listStyle = (element: any) => {
 
 const indicatorStyle = (element: any) => {
   const x = styled(element)`
-    all: unset;
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -66,7 +62,6 @@ const indicatorStyle = (element: any) => {
 
 const arrowStyle = (element: any) => {
   const x = styled(element)`
-    all: unset;
     position: relative;
     top: 70%;
     background-color: white;
@@ -84,9 +79,10 @@ const viewportWrapperStyle = (element: any) => {
     position: absolute;
     display: flex;
     justify-content: center;
-    max-width: 600px;
     width: 100%;
     top: 100%;
+    left: 0;
+    perspective: 2000px;
   `;
 
   return x;
@@ -97,7 +93,6 @@ const viewportStyle = (element: any) => {
     position: relative;
     transform-origin: top center;
     margin-top: 10px;
-    max-width: 600px;
     width: 100%;
     background-color: white;
     border-radius: 6px;
@@ -121,7 +116,8 @@ const viewportStyle = (element: any) => {
 // content
 const ulStyle = (element: any) => {
   const x = styled(element)`
-    all: unset;
+    margin-block-start: 0 !important;
+    padding-inline-start: 0 !important;
     display: grid;
     margin: 0;
     column-gap: 10px;
@@ -136,13 +132,11 @@ const contentStyle = (element: any) => {
     position: absolute;
     top: 0;
     left: 0;
-    max-width: 600px;
     width: 100%;
     border-radius: 6px;
-    padding: 24px;
+    padding: 8px;
     animation-duration: 250ms;
     animation-timing-function: ease;
-    box-shadow: 0 2px 10px var(--nvo-gray-400);
 
     &[data-motion="from-start"] {
       animation-name: ${enterFromLeft};
@@ -166,10 +160,8 @@ const contentStyle = (element: any) => {
 
 const itemHeadingStyle = (element: any) => {
   const x = styled(element)`
-    all: unset;
     display: inline-block;
     font-weight: 600;
-    margin-bottom: 8px;
     color: var(--nvo-secondary);
   `;
 
@@ -178,7 +170,7 @@ const itemHeadingStyle = (element: any) => {
 
 const itemBodyStyle = (element: any) => {
   const x = styled(element)`
-    all: unset;
+    margin-top: 8px;
     color: var(--nvo-gray-700);
     font-weight: 400;
   `;
@@ -193,18 +185,17 @@ const linkStyle = (element: any) => {
     outline: none;
     text-decoration: none;
     user-select: none;
-    padding: 16px;
+    padding: 8px;
     border-radius: 6px;
     font-size: 13px;
     cursor: pointer;
     color: var(--nvo-link-color)
 
     &:focus {
-        background-color: rgba(var(--nvo-primary-rgb), 0.1);
+      background-color: rgba(var(--nvo-primary-rgb), 0.1);
     }
-
     &:hover {
-        background-color: rgba(var(--nvo-primary-rgb), 0.1);
+      background-color: rgba(var(--nvo-primary-rgb), 0.1);
     }
   `;
 
@@ -212,6 +203,7 @@ const linkStyle = (element: any) => {
 };
 
 // item
+
 const triggerStyle = (element: any) => {
   const x = styled(element)`
     all: unset;
@@ -226,7 +218,6 @@ const triggerStyle = (element: any) => {
     display: flex;
     align-items: center;
     padding: 0 0.75rem;
-    justify-content: space-between;
     gap: 4px;
     background-color: transparent;
     border: none;
@@ -257,13 +248,9 @@ const itemStyle = (element: any) => {
 
 const carretStyle = (element: any) => {
   const x = styled(element)`
-    all: unset;
     position: relative;
     top: 1px;
     transition: transform 250ms ease;
-    &[data-state="open"] {
-      transform: rotate(-180deg);
-    }
   `;
 
   return x;

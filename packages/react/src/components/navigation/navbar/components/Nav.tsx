@@ -8,6 +8,7 @@ export interface NavbarItemProps
   isActive?: boolean;
   title: string;
   disabled?: boolean;
+  as?: "nav" | "item";
 }
 
 const Item = itemStyle(NavigationPrimitive.Item);
@@ -18,11 +19,13 @@ const Nav: React.FC<NavbarItemProps> = ({
   isActive,
   icon,
   disabled,
+  as = "nav",
 }) => {
   const renderIcon = () => {
     return (
       icon && (
-        <div style={{ bottom: -1, position: "relative" }}>
+        // <div style={{ bottom: -1, position: "relative" }}>
+        <div>
           {React.createElement(icon, {
             fill: "currentColor",
             size: 18,
