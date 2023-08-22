@@ -13,6 +13,8 @@ import { Stack } from "../../../layout";
 
 interface NavContentProps {
   menu?: ChildProps[];
+  onClick?: (e: Event) => void;
+  isActive?: boolean;
 }
 
 const UL = ulStyle("ul");
@@ -27,11 +29,11 @@ const ItemText = itemBodyStyle("div");
 
 const NavContent: React.FC<
   NavContentProps & NavigationPrimitive.NavigationMenuContentProps
-> = ({ menu }) => {
+> = ({ menu, onClick, isActive }) => {
   const renderList = () => {
     return menu?.map((m, id) => (
       <li key={id}>
-        <NavigationPrimitive.Link>
+        <NavigationPrimitive.Link onSelect={onClick} active={isActive}>
           <Link>
             {m?.icon && (
               <div style={{ marginRight: 16 }}>

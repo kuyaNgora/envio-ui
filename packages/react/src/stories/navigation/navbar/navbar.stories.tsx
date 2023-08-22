@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 /* eslint-disable react/jsx-wrap-multilines */
 import React from "react";
 import {
@@ -8,7 +9,7 @@ import {
   SlidersOutline,
   TruckOutline,
 } from "@envio-ui/icons";
-import { Button, Navbar, Stack } from "../../../components";
+import { Navbar } from "../../../components";
 
 export default {
   title: "Components/Navigation/Navbar",
@@ -206,16 +207,29 @@ const menu = [
 
 export const Example: React.FC = () => {
   return (
-    <Navbar
-      brand="https://envio.co.id/static/media/logo.64687ddcab57889e138f.png"
-      menu={menu}
-      actions={
-        <Stack direction="horizontal" spacing="sm">
-          <Button variant="primary" size="sm" borderRadius={20}>
-            actions
-          </Button>
-        </Stack>
-      }
-    />
+    <Navbar>
+      {menu?.map((nav, id) => {
+        if (nav?.isDropdown) {
+          return (
+            <Navbar.Dropdown
+              key={`nav-${id}`}
+              title={nav.label}
+              child={nav.child}
+              icon={nav?.icon}
+              disabled={nav?.disabled}
+            />
+          );
+        }
+
+        return (
+          <Navbar.Nav
+            key={id}
+            title={nav.label}
+            icon={nav?.icon}
+            disabled={nav?.disabled}
+          />
+        );
+      })}
+    </Navbar>
   );
 };

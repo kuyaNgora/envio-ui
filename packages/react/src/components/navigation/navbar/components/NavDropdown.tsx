@@ -2,12 +2,18 @@ import { ChevronDownOutline } from "@envio-ui/icons";
 import * as NavigationPrimitive from "@radix-ui/react-navigation-menu";
 import React from "react";
 import NavContent from "./NavContent";
-import { ChildProps, carretStyle, itemStyle, triggerStyle } from "./utils";
+import {
+  ChildProps,
+  arrowStyle,
+  carretStyle,
+  indicatorStyle,
+  itemStyle,
+  triggerStyle,
+} from "./utils";
 
-interface NavbarItemProps extends NavigationPrimitive.NavigationMenuItemProps {
+export interface NavDropdownProps
+  extends NavigationPrimitive.NavigationMenuItemProps {
   icon?: React.ComponentType<any>;
-  isActive?: boolean;
-  isDropdown?: boolean;
   title: string;
   disabled?: boolean;
   child?: ChildProps[];
@@ -16,12 +22,12 @@ interface NavbarItemProps extends NavigationPrimitive.NavigationMenuItemProps {
 const Trigger = triggerStyle(NavigationPrimitive.Trigger);
 const Carret = carretStyle(ChevronDownOutline);
 const Item = itemStyle(NavigationPrimitive.Item);
-const Link = triggerStyle(NavigationPrimitive.Link);
+const Indicator = indicatorStyle(NavigationPrimitive.Indicator);
+const Arrow = arrowStyle("div");
 
-const NavbarItem: React.FC<NavbarItemProps> = ({
+const NavDropdown: React.FC<NavDropdownProps> = ({
   title,
   icon,
-  isDropdown,
   disabled,
   child,
 }) => {
@@ -37,9 +43,8 @@ const NavbarItem: React.FC<NavbarItemProps> = ({
       )
     );
   };
-
-  if (isDropdown) {
-    return (
+  return (
+    <>
       <Item aria-disabled={disabled}>
         <Trigger>
           {renderIcon()}
@@ -47,17 +52,11 @@ const NavbarItem: React.FC<NavbarItemProps> = ({
         </Trigger>
         <NavContent menu={child} />
       </Item>
-    );
-  }
-
-  return (
-    <Item aria-disabled={disabled}>
-      <Link>
-        {renderIcon()}
-        {title}
-      </Link>
-    </Item>
+      <Indicator>
+        <Arrow />
+      </Indicator>
+    </>
   );
 };
 
-export default NavbarItem;
+export default NavDropdown;
