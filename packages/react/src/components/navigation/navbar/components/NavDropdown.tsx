@@ -5,7 +5,7 @@ import React from "react";
 import { carretStyle, itemStyle, triggerStyle } from "./utils";
 
 export interface NavDropdownProps
-  extends NavigationPrimitive.NavigationMenuItemProps {
+  extends NavigationPrimitive.NavigationMenuTriggerProps {
   icon?: React.ComponentType<any>;
   title: string;
   disabled?: boolean;
@@ -21,6 +21,7 @@ const NavDropdown: React.FC<NavDropdownProps> = ({
   icon,
   disabled,
   children,
+  ...rest
 }) => {
   const renderIcon = () => {
     return (
@@ -34,9 +35,10 @@ const NavDropdown: React.FC<NavDropdownProps> = ({
       )
     );
   };
+
   return (
     <Item aria-disabled={disabled}>
-      <Trigger>
+      <Trigger {...rest}>
         {renderIcon()}
         {title} <Carret fill="currentColor" size={14} />
       </Trigger>

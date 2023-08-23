@@ -3,24 +3,16 @@ import * as NavigationPrimitive from "@radix-ui/react-navigation-menu";
 import { itemStyle, triggerStyle } from "./utils";
 
 export interface NavbarItemProps
-  extends NavigationPrimitive.NavigationMenuItemProps {
+  extends NavigationPrimitive.NavigationMenuTriggerProps {
   icon?: React.ComponentType<any>;
-  isActive?: boolean;
   title: string;
   disabled?: boolean;
-  as?: "nav" | "item";
 }
 
 const Item = itemStyle(NavigationPrimitive.Item);
 const Link = triggerStyle(NavigationPrimitive.Link);
 
-const Nav: React.FC<NavbarItemProps> = ({
-  title,
-  isActive,
-  icon,
-  disabled,
-  as = "nav",
-}) => {
+const Nav: React.FC<NavbarItemProps> = ({ title, icon, disabled, ...rest }) => {
   const renderIcon = () => {
     return (
       icon && (
@@ -37,7 +29,7 @@ const Nav: React.FC<NavbarItemProps> = ({
 
   return (
     <Item aria-disabled={disabled}>
-      <Link active={isActive}>
+      <Link {...rest} onClick={() => console.log(title, "hahahaha")}>
         {renderIcon()}
         {title}
       </Link>
