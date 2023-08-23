@@ -1,4 +1,3 @@
-import { StoryFn } from "@storybook/react";
 import React from "react";
 import { Accordion } from "../../../components";
 
@@ -86,7 +85,7 @@ export default {
   },
 };
 
-export const SingleAccordion: StoryFn<{}> = () => {
+export const SingleAccordion: React.FC = () => {
   return (
     <Accordion
       type="single"
@@ -140,7 +139,7 @@ export const SingleAccordion: StoryFn<{}> = () => {
   );
 };
 
-export const MultipleAccordion: StoryFn<{}> = () => {
+export const MultipleAccordion: React.FC = () => {
   return (
     <Accordion
       type="multiple"

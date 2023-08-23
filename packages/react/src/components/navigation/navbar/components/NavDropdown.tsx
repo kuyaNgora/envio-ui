@@ -1,13 +1,8 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { ChevronDownOutline } from "@envio-ui/icons";
 import * as NavigationPrimitive from "@radix-ui/react-navigation-menu";
 import React from "react";
-import {
-  arrowStyle,
-  carretStyle,
-  indicatorStyle,
-  itemStyle,
-  triggerStyle,
-} from "./utils";
+import { carretStyle, itemStyle, triggerStyle } from "./utils";
 
 export interface NavDropdownProps
   extends NavigationPrimitive.NavigationMenuItemProps {
@@ -20,8 +15,6 @@ export interface NavDropdownProps
 const Trigger = triggerStyle(NavigationPrimitive.Trigger);
 const Carret = carretStyle(ChevronDownOutline);
 const Item = itemStyle(NavigationPrimitive.Item);
-const Indicator = indicatorStyle(NavigationPrimitive.Indicator);
-const Arrow = arrowStyle("div");
 
 const NavDropdown: React.FC<NavDropdownProps> = ({
   title,
@@ -32,7 +25,6 @@ const NavDropdown: React.FC<NavDropdownProps> = ({
   const renderIcon = () => {
     return (
       icon && (
-        // <div style={{ bottom: -1, position: "relative" }}>
         <div>
           {React.createElement(icon, {
             fill: "currentColor",
@@ -43,18 +35,13 @@ const NavDropdown: React.FC<NavDropdownProps> = ({
     );
   };
   return (
-    <>
-      <Item aria-disabled={disabled}>
-        <Trigger>
-          {renderIcon()}
-          {title} <Carret fill="currentColor" size={14} />
-        </Trigger>
-        {children}
-      </Item>
-      <Indicator>
-        <Arrow />
-      </Indicator>
-    </>
+    <Item aria-disabled={disabled}>
+      <Trigger>
+        {renderIcon()}
+        {title} <Carret fill="currentColor" size={14} />
+      </Trigger>
+      {children}
+    </Item>
   );
 };
 

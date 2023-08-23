@@ -5,6 +5,8 @@ import { contentStyle, ulStyle } from "./utils";
 
 export interface NavContentProps {
   children?: React.ReactNode;
+  className?: string;
+  style?: React.CSSProperties;
 }
 
 const UL = ulStyle("ul");
@@ -12,7 +14,7 @@ const Content = contentStyle(NavigationPrimitive.Content);
 
 const NavContent: React.FC<
   NavContentProps & NavigationPrimitive.NavigationMenuContentProps
-> = ({ children }) => {
+> = ({ children, className, style }) => {
   // const renderList = () => {
   //   return menu?.map((m, id) => (
   //     <li key={id}>
@@ -37,7 +39,7 @@ const NavContent: React.FC<
   // };
 
   return (
-    <Content>
+    <Content className={className} style={style}>
       <UL>{children}</UL>
     </Content>
   );

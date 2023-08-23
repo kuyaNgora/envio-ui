@@ -14,6 +14,17 @@ import { Navbar } from "../../../components";
 export default {
   title: "Components/Navigation/Navbar",
   component: Navbar,
+  parameters: {
+    backgrounds: {
+      default: "dark",
+      value: [
+        {
+          name: "dark",
+          value: "#202020",
+        },
+      ],
+    },
+  },
   argTypes: {
     className: {
       table: {
@@ -144,13 +155,6 @@ const menu = [
     ],
   },
   {
-    label: "Product",
-    icon: PriceTagOutline,
-    url: "/product",
-    active: "product",
-    disabled: true,
-  },
-  {
     label: "Services",
     url: "/service",
     active: "service",
@@ -191,9 +195,66 @@ const menu = [
     ],
   },
   {
+    label: "Product",
+    icon: PriceTagOutline,
+    url: "/product",
+    active: "product",
+    disabled: true,
+  },
+  {
     label: "About Us",
     url: "/about",
     active: "about",
+  },
+  {
+    label: "About Us",
+    url: "/about",
+    active: "about",
+  },
+  {
+    label: "About Us",
+    url: "/about",
+    active: "about",
+  },
+  {
+    label: "Services",
+    url: "/service",
+    active: "service",
+    isDropdown: true,
+    child: [
+      {
+        icon: TruckOutline,
+        label: "Envio digital logistik & supply chain enabler",
+        desciption:
+          "Platform logistik berbasis cloud yang dapat menampilkan proses rantai pasokan secara komprehensif dan real-time",
+        url: "/",
+        active: "",
+      },
+      {
+        icon: GlobeOutline,
+        label: "Supply chain management solution",
+        desciption:
+          "Membantu dalam mengelola rantai pasokan dari hulu ke hilir dengan tim expert di bidangnya",
+        url: "/",
+        active: "",
+      },
+      {
+        icon: BroadcastOutline,
+        label: "Layanan transportasi",
+        desciption:
+          "Kelola pemindahan produk dalam jumlah besar dari gudang ke gudang atau ke pelanggan dengan mudah, aman dan fleksibel.",
+        url: "/",
+        active: "",
+      },
+      {
+        icon: SlidersOutline,
+        label: "Layanan pergudangan",
+        desciption:
+          "Kelola stok, pengemasan dan pengiriman barang dengan mudah, aman dan fleksibel sesuai dengan kebutuhan perusahaan.",
+        url: "/",
+        active: "",
+      },
+    ],
   },
 ];
 

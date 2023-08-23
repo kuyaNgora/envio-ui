@@ -1,12 +1,7 @@
 /* eslint-disable react/no-array-index-key */
 import * as NavigationPrimitive from "@radix-ui/react-navigation-menu";
 import React from "react";
-import {
-  listStyle,
-  rootStyle,
-  viewportStyle,
-  viewportWrapperStyle,
-} from "./utils";
+import { arrowStyle, indicatorStyle, listStyle, rootStyle } from "./utils";
 import NavDropdown from "./NavDropdown";
 import Nav from "./Nav";
 import NavContent from "./NavContent";
@@ -29,8 +24,8 @@ export interface NavbarProps {
 
 const Root = rootStyle(NavigationPrimitive.Root);
 const List = listStyle(NavigationPrimitive.List);
-const ViewportWrapper = viewportWrapperStyle("div");
-const Viewport = viewportStyle(NavigationPrimitive.Viewport);
+const Indicator = indicatorStyle(NavigationPrimitive.Indicator);
+const Arrow = arrowStyle("div");
 
 const Navbar: React.FC<NavbarProps> = ({
   className,
@@ -44,10 +39,13 @@ const Navbar: React.FC<NavbarProps> = ({
 }) => {
   return (
     <Root {...rest} style={style}>
-      <List>{children}</List>
-      <ViewportWrapper>
-        <Viewport />
-      </ViewportWrapper>
+      <List>
+        {children}
+
+        <Indicator>
+          <Arrow />
+        </Indicator>
+      </List>
     </Root>
   );
 };
