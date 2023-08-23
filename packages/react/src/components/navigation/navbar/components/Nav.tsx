@@ -29,7 +29,7 @@ const Nav: React.FC<NavbarItemProps> = ({ title, icon, disabled, ...rest }) => {
 
   return (
     <Item aria-disabled={disabled}>
-      <Link {...rest} onClick={() => console.log(title, "hahahaha")}>
+      <Link {...rest}>
         {renderIcon()}
         {title}
       </Link>
