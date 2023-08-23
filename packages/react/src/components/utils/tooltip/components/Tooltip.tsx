@@ -6,6 +6,7 @@ export interface TooltipProps {
   placement?: "top" | "right" | "bottom" | "left" | undefined;
   trigger?: React.ReactNode;
   content?: React.ReactNode;
+  contentAlign?: "start" | "center" | "end";
 }
 
 const slideUpAndFade = keyframes`
@@ -84,7 +85,12 @@ const Content = styled(TooltipPrimitive.Content)`
   }
 `;
 
-const Tooltip: React.FC<TooltipProps> = ({ placement, trigger, content }) => {
+const Tooltip: React.FC<TooltipProps> = ({
+  placement,
+  trigger,
+  content,
+  contentAlign = "center",
+}) => {
   return (
     <TooltipPrimitive.Provider>
       <TooltipPrimitive.Root>
@@ -92,7 +98,7 @@ const Tooltip: React.FC<TooltipProps> = ({ placement, trigger, content }) => {
           {trigger}
         </TooltipPrimitive.Trigger>
         <TooltipPrimitive.Portal style={{ minWidth: "fit-content !important" }}>
-          <Content side={placement}>
+          <Content side={placement} align={contentAlign}>
             {content}
             <TooltipPrimitive.Arrow className="TooltipArrow" />
           </Content>
