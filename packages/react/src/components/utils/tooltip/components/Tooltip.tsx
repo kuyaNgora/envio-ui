@@ -49,7 +49,9 @@ const slideLeftAndFade = keyframes`
     transform: translateX(0);
   }`;
 
-const Content = styled(TooltipPrimitive.Content)`
+const Content = styled(TooltipPrimitive.Content)<{
+  align?: "start" | "end" | "center";
+}>`
   border-radius: 4px;
   margin: 5px;
   padding: 10px;
@@ -80,8 +82,13 @@ const Content = styled(TooltipPrimitive.Content)`
     }
   }
 
-  .TooltipArrow {
-    fill: var(--nvo-dark);
+  span {
+    ${props => props.align === "start" && `left: 10px !important;`}
+    ${props => props.align === "end" && `right: 10px !important;`}
+    visibility: visible !important;
+    .TooltipArrow {
+      fill: var(--nvo-dark);
+    }
   }
 `;
 

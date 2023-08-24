@@ -19,6 +19,19 @@ export default {
         defaultValue: { summary: "top" },
       },
     },
+    contentAlign: {
+      control: "select",
+      options: ["start", "end", "center"],
+      description: "placement of the content",
+      table: {
+        type: {
+          summary: `start | end | center`,
+          detail: null,
+          name: "select",
+        },
+        defaultValue: { summary: "center" },
+      },
+    },
     trigger: {
       table: {
         type: {
@@ -40,11 +53,17 @@ export default {
   },
 };
 
-const Template: StoryFn<TooltipProps> = ({ placement }) => {
+const Template: StoryFn<TooltipProps> = ({ placement, contentAlign }) => {
   return (
     <Tooltip
+      contentAlign={contentAlign}
       placement={placement}
-      trigger={<div>trigger</div>}
+      trigger={
+        <div>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum
+          dolor sit amet, consectetur adipiscing elit
+        </div>
+      }
       content={
         <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
       }
