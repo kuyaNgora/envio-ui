@@ -1,7 +1,7 @@
 import { XmarkOutline } from "@envio-ui/icons";
 import * as React from "react";
 import { useComponentStyles } from "../../../../system";
-import { Box, BoxProps } from "../../../layout";
+import { Box, BoxProps, Stack } from "../../../layout";
 import { UnstyledButton } from "../../../inputs";
 
 export interface ModalHeaderProps extends Omit<BoxProps, "children"> {
@@ -36,13 +36,8 @@ const ModalHeader: React.FC<ModalHeaderProps> = ({
   const ModalHeaderStyle = useComponentStyles("modalHeader", { size });
 
   return (
-    <>
-      <Box
-        sx={{ ...ModalHeaderStyle, ...sx }}
-        className={className}
-        style={style}
-        {...rest}
-      >
+    <Box className={className} style={style} {...rest}>
+      <Stack direction="horizontal" sx={{ ...ModalHeaderStyle, ...sx }}>
         {backButton && <Box marginRight={"md"}>{backButton}</Box>}
         <Box
           display={"flex"}
@@ -74,11 +69,11 @@ const ModalHeader: React.FC<ModalHeaderProps> = ({
             </UnstyledButton>
           </Box>
         )}
-      </Box>
+      </Stack>
       {divider && (
         <div style={{ backgroundColor: "#E7E9ED", height: 1, width: "100%" }} />
       )}
-    </>
+    </Box>
   );
 };
 

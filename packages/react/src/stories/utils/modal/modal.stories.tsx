@@ -256,11 +256,180 @@ export const Example = () => {
         />
 
         <Modal.Body>
-          <Stack textAlign="center">
-            <Text scale={"sm"}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </Text>
-          </Stack>
+          <Text scale={"sm"}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Text>
+          <Text scale={"sm"}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Text>
+          <Text scale={"sm"}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Text>
+          <Text scale={"sm"}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Text>
+          <Text scale={"sm"}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Text>
+          <Text scale={"sm"}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Text>
+          <Text scale={"sm"}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Text>
+          <Text scale={"sm"}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Text>
+          <Text scale={"sm"}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Text>
+          <Text scale={"sm"}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Text>
+          <Text scale={"sm"}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Text>
+          <Text scale={"sm"}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Text>
+          <Text scale={"sm"}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Text>
+          <Text scale={"sm"}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Text>
+          <Text scale={"sm"}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Text>
+          <Text scale={"sm"}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Text>
+          <Text scale={"sm"}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Text>
+          <Text scale={"sm"}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Text>
+          <Text scale={"sm"}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Text>
+          <Text scale={"sm"}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Text>
+          <Text scale={"sm"}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Text>
+          <Text scale={"sm"}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Text>
+          <Text scale={"sm"}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Text>
+          <Text scale={"sm"}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Text>
+          <Text scale={"sm"}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Text>
+          <Text scale={"sm"}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Text>
+          <Text scale={"sm"}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Text>
+          <Text scale={"sm"}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Text>
+          <Text scale={"sm"}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Text>
+          <Text scale={"sm"}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Text>
+          <Text scale={"sm"}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Text>
+          <Text scale={"sm"}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Text>
+          <Text scale={"sm"}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Text>
+          <Text scale={"sm"}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Text>
+          <Text scale={"sm"}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Text>
+          <Text scale={"sm"}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Text>
+          <Text scale={"sm"}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Text>
+          <Text scale={"sm"}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Text>
+          <Text scale={"sm"}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Text>
+          <Text scale={"sm"}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Text>
+          <Text scale={"sm"}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Text>
+          <Text scale={"sm"}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Text>
+          <Text scale={"sm"}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Text>
+          <Text scale={"sm"}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Text>
+          <Text scale={"sm"}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Text>
+          <Text scale={"sm"}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Text>
+          <Text scale={"sm"}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Text>
+          <Text scale={"sm"}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Text>
+          <Text scale={"sm"}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Text>
+          <Text scale={"sm"}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Text>
+          <Text scale={"sm"}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Text>
+          <Text scale={"sm"}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Text>
+          <Text scale={"sm"}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Text>
+          <Text scale={"sm"}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Text>
+          <Text scale={"sm"}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Text>
+          <Text scale={"sm"}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Text>
+          <Text scale={"sm"}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Text>
+          <Text scale={"sm"}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </Text>
         </Modal.Body>
 
         <Modal.Footer

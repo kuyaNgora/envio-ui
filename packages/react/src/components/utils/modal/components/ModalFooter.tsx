@@ -1,11 +1,11 @@
 import React from "react";
 import { useComponentStyles } from "../../../../system";
-import { Box, BoxProps } from "../../../layout";
+import { Box, BoxProps, Stack } from "../../../layout";
 
 export interface ModalFooterProps extends Omit<BoxProps, "children"> {
   className?: string;
   style?: React.CSSProperties;
-  size?: "sm" | "md" | "lg";
+  size?: "sm" | "lg";
   caption?: string;
   actions?: React.ReactNode;
   children?: React.ReactNode;
@@ -27,23 +27,18 @@ const ModalFooter: React.FC<ModalFooterProps> = ({
 }) => {
   const ModalFooterStyle = useComponentStyles("modalFooter", { size });
   return (
-    <>
+    <Box className={className} style={style} {...rest}>
       {divider && (
         <div style={{ backgroundColor: "#E7E9ED", height: 1, width: "100%" }} />
       )}
-      <Box
-        sx={{ ...ModalFooterStyle, ...sx }}
-        className={className}
-        style={style}
-        {...rest}
-      >
+      <Stack direction="horizontal" sx={{ ...ModalFooterStyle, ...sx }}>
         {actions && (
           <Box display={"flex"} flex={fluid ? 1 : 1 / 2}>
             {actions}
           </Box>
         )}
-      </Box>
-    </>
+      </Stack>
+    </Box>
   );
 };
 

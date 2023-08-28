@@ -21,6 +21,7 @@ const ModalContent: React.FC<ModalContentProps> = ({
       flex="1 1 auto"
       px="lg"
       py="md"
+      overflowY="auto"
     >
       {children}
     </Box>

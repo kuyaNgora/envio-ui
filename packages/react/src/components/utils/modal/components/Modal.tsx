@@ -191,10 +191,10 @@ class Modal extends React.Component<ModalProps, ModalState> {
           height={height}
           width={width || "100%"}
           maxWidth={maxWidth || "500px"}
-          maxHeight={maxHeight || "calc(100% - 24vmin)"}
+          maxHeight={maxHeight || "calc(100% - 30vmin)"}
           boxShadow={4}
           my="12vmin"
-          mx="md"
+          mx="16px"
           role="dialog"
           aria-modal="true"
           aria-labelledby={labelledById}

@@ -6,16 +6,16 @@ const modalHeader: ComponentThemeConfig = {
     display: "flex",
     alignItems: "center",
     px: "md",
-    backgroundColor: "greylight01",
+    backgroundColor: "#F4F6FA",
   },
   propToScaleMap: [["size", "sizes"]],
   scales: {
     sizes: {
       sm: {
-        height: "57px",
+        height: 57,
       },
       lg: {
-        height: "72px",
+        height: 72,
       },
     },
   },
@@ -27,19 +27,16 @@ const modalFooter: ComponentThemeConfig = {
     justifyContent: "flex-end",
     alignItems: "center",
     px: "md",
-    backgroundColor: "greylight01",
+    backgroundColor: "#F4F6FA",
   },
   propToScaleMap: [["size", "sizes"]],
   scales: {
     sizes: {
       sm: {
-        height: "48px",
-      },
-      md: {
-        height: "56px",
+        height: 57,
       },
       lg: {
-        height: "72px",
+        height: 72,
       },
     },
   },
