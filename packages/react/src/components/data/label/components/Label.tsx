@@ -1,4 +1,5 @@
 import React from "react";
+import { number } from "prop-types";
 import { useComponentStyles } from "../../../../system";
 import { Box } from "../../../layout";
 import { LabelText } from "../../typography";
@@ -21,16 +22,37 @@ export interface LabelProps {
   style?: React.CSSProperties;
   /** Variant of the badge. */
   variant?: LabelVariant;
+
+  // label text
+  fontSize?: string | number;
+  /** Additional CSS classes to give to the component. */
+  labelClass?: string;
+  /** Additional CSS properties to give to the component. */
+  labelStyle?: React.CSSProperties;
 }
 
-const Label: React.FC<LabelProps> = ({ children, variant, ...rest }) => {
-  const labelStyle = useComponentStyles("label", {
+const Label: React.FC<LabelProps> = ({
+  children,
+  variant,
+  fontSize = 12,
+  labelClass,
+  labelStyle,
+  ...rest
+}) => {
+  const sx = useComponentStyles("label", {
     variant: typeof variant === "string" ? variant : undefined,
   });
 
   return (
-    <Box sx={labelStyle} {...rest}>
-      <LabelText scale={"md"} fontFamily={"brand"} textTransform={"uppercase"}>
+    <Box sx={sx} {...rest}>
+      <LabelText
+        className={labelClass}
+        style={labelStyle}
+        fontSize={fontSize}
+        scale={"md"}
+        fontFamily={"brand"}
+        textTransform={"uppercase"}
+      >
         {children}
       </LabelText>
     </Box>
