@@ -45,7 +45,6 @@ const indicatorStyle = (element: any) => {
     height: 10px;
     top: 100%;
     overflow: hidden;
-    z-index: 1;
     transition: width, transform 250ms ease;
 
     [data-state="visible"] & {
@@ -90,6 +89,7 @@ const ulStyle = (element: any) => {
 const contentStyle = (element: any) => {
   const x = styled(element)`
     position: absolute;
+    margin-top: 14px;
     top: 125%;
     min-width: max-content;
     border-radius: 6px;
@@ -201,6 +201,33 @@ const carretStyle = (element: any) => {
   return x;
 };
 
+const viewportWrapperStyle = (element: any) => {
+  const x = styled(element)`
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 100%;
+    width: 100%;
+  `;
+
+  return x;
+};
+
+const viewportStyle = (element: any) => {
+  const x = styled(element)`
+    position: relative;
+    transform-origin: top center;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 6px;
+    overflow: hidden;
+    height: var(--radix-navigation-menu-viewport-height);
+    transition: width, height, 300ms ease;
+  `;
+
+  return x;
+};
+
 export {
   arrowStyle,
   indicatorStyle,
@@ -212,4 +239,6 @@ export {
   triggerStyle,
   carretStyle,
   itemStyle,
+  viewportStyle,
+  viewportWrapperStyle,
 };

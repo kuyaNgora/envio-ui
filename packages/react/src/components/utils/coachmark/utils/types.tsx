@@ -9,7 +9,7 @@ export interface FooterTypes {
   length: number;
 }
 
-export interface Tooltip extends PositionTypes {
+export interface TooltipCMProps extends PositionTypes {
   footer?: FooterTypes;
   next?: VoidFunction;
   prev?: VoidFunction;
@@ -19,14 +19,14 @@ export interface CoachProps {
   activate: boolean;
   component: React.ReactNode;
   reference: React.MutableRefObject<null> | string;
-  tooltip?: Tooltip;
+  tooltip?: TooltipCMProps;
 }
 
 export interface CoachCoreProps {
   activate: boolean;
   component: React.ReactNode;
   element: Element;
-  tooltip: Tooltip;
+  tooltip: TooltipCMProps;
 }
 
 export interface Directions {

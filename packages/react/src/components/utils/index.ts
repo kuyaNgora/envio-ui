@@ -4,3 +4,4 @@ export * from "./tooltip";
 export * from "./upload";
 export * from "./coachmark";
 export * from "./carousel";
+export * from "./alert-dialog";

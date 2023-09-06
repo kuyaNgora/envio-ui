@@ -16,7 +16,6 @@ const Nav: React.FC<NavbarItemProps> = ({ title, icon, disabled, ...rest }) => {
   const renderIcon = () => {
     return (
       icon && (
-        // <div style={{ bottom: -1, position: "relative" }}>
         <div>
           {React.createElement(icon, {
             fill: "currentColor",

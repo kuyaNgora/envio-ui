@@ -27,6 +27,9 @@ const List = listStyle(NavigationPrimitive.List);
 const Indicator = indicatorStyle(NavigationPrimitive.Indicator);
 const Arrow = arrowStyle("div");
 
+// const ViewportWrapper = viewportWrapperStyle("div");
+// const Viewport = viewportStyle(NavigationPrimitive.Viewport);
+
 const Navbar: React.FC<NavbarProps> = ({
   className,
   style,
@@ -46,6 +49,9 @@ const Navbar: React.FC<NavbarProps> = ({
           <Arrow />
         </Indicator>
       </List>
+      {/* <ViewportWrapper>
+        <Viewport />
+      </ViewportWrapper> */}
     </Root>
   );
 };
