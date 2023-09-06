@@ -24,9 +24,9 @@ const contentShow = keyframes`
 
 const overlayStyle = (element: any) => {
   const style = styled(element)`
-    background-color: ${transparentize(0.5, foundations.colors.greylight05)};
+    background-color: ${transparentize(0.9, foundations.colors.greylight01)};
     position: fixed;
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(1px);
     inset: 0;
     animation: ${overlayShow} 150ms cubic-bezier(0.16, 1, 0.3, 1);
   `;
@@ -37,8 +37,8 @@ const contentStyle = (element: any) => {
   const style = styled(element)`
     background-color: var(--nvo-white);
     border-radius: 6px;
-    box-shadow: 0px 10px 38px -10px ${transparentize(0.35, foundations?.colors?.black)},
-      0px 10px 20px -15px ${transparentize(0.2, foundations?.colors?.black)};
+    box-shadow: 0px 10px 38px -10px ${transparentize(0.65, foundations?.colors?.black)},
+      0px 10px 20px -15px ${transparentize(0.8, foundations?.colors?.black)};
     position: fixed;
     top: 50%;
     left: 50%;
