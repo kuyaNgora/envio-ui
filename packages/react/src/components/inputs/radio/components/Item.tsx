@@ -6,7 +6,6 @@ export interface ItemProps {
   className?: string;
   style?: React.CSSProperties;
   label?: string;
-  onChange: () => void;
   value: string;
   disabled?: boolean;
 }
@@ -97,7 +96,7 @@ const Indicator = styled(RadioPrimitive.Indicator)`
 `;
 
 const RadioItem = React.forwardRef<HTMLInputElement, ItemProps>(
-  ({ className, style, label, onChange, value, disabled }, ref) => {
+  ({ className, style, label, value, disabled }, ref) => {
     const renderLabel = () => {
       return (
         label && (
@@ -110,7 +109,7 @@ const RadioItem = React.forwardRef<HTMLInputElement, ItemProps>(
 
     const renderItem = () => {
       return (
-        <Items onChange={onChange} value={value} disabled={disabled} id={value}>
+        <Items value={value} disabled={disabled} id={value}>
           <Indicator />
         </Items>
       );

@@ -14,14 +14,13 @@ export interface DropdownMenuProps extends DropdownPrimitive.DropdownMenuProps {
   className?: string;
 }
 
-const Dropdown = React.forwardRef<HTMLDivElement, DropdownMenuProps>(
-  ({ className, children, ...rest }) => {
-    return (
-      <DropdownPrimitive.Root {...rest}>{children}</DropdownPrimitive.Root>
-    );
-  }
-);
-
+const Dropdown: React.FC<DropdownMenuProps> = ({
+  className,
+  children,
+  ...rest
+}) => {
+  return <DropdownPrimitive.Root {...rest}>{children}</DropdownPrimitive.Root>;
+};
 export default Object.assign(Dropdown, {
   Trigger,
   Portal,

@@ -16,13 +16,15 @@ const ItemIndicatorCard = styled(DropdownPrimitive.ItemIndicator)`
   justify-content: center;
 `;
 
-const ItemIndicator: React.FC<ItemIndicatorProps> = ({
-  className,
-  children,
-  ...rest
-}) => {
-  return <ItemIndicatorCard {...rest}>{children}</ItemIndicatorCard>;
-};
+const ItemIndicator = React.forwardRef<HTMLSpanElement, ItemIndicatorProps>(
+  ({ className, children, ...rest }, ref) => {
+    return (
+      <ItemIndicatorCard {...rest} ref={ref}>
+        {children}
+      </ItemIndicatorCard>
+    );
+  }
+);
 
 export interface SeparatorProps
   extends DropdownPrimitive.DropdownMenuSeparatorProps {
@@ -35,24 +37,28 @@ const SeparatorDiv = styled(DropdownPrimitive.Separator)`
   background-color: var(--nvo-dark);
 `;
 
-const Separator: React.FC<SeparatorProps> = ({
-  className,
-  children,
-  ...rest
-}) => {
-  return <SeparatorDiv {...rest}>{children}</SeparatorDiv>;
-};
+const Separator = React.forwardRef<HTMLDivElement, SeparatorProps>(
+  ({ className, children, ...rest }, ref) => {
+    return (
+      <SeparatorDiv {...rest} ref={ref}>
+        {children}
+      </SeparatorDiv>
+    );
+  }
+);
 
 export interface ArrowProps extends DropdownPrimitive.DropdownMenuArrowProps {
   className?: string;
 }
 
-const Arrow: React.FC<ArrowProps> = ({ className, children, ...rest }) => {
-  return (
-    <DropdownPrimitive.Arrow {...rest} style={{ fill: "white" }}>
-      {children}
-    </DropdownPrimitive.Arrow>
-  );
-};
+const Arrow = React.forwardRef<SVGSVGElement, ArrowProps>(
+  ({ className, children, ...rest }, ref) => {
+    return (
+      <DropdownPrimitive.Arrow {...rest} style={{ fill: "white" }} ref={ref}>
+        {children}
+      </DropdownPrimitive.Arrow>
+    );
+  }
+);
 
 export { ItemIndicator, Separator, Arrow };

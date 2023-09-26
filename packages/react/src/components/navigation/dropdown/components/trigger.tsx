@@ -6,10 +6,14 @@ export interface TriggerProps
   className?: string;
 }
 
-const Trigger: React.FC<TriggerProps> = ({ className, children, ...rest }) => {
-  return (
-    <DropdownPrimitive.Trigger {...rest}>{children}</DropdownPrimitive.Trigger>
-  );
-};
+const Trigger = React.forwardRef<HTMLButtonElement, TriggerProps>(
+  ({ className, children, ...rest }, ref) => {
+    return (
+      <DropdownPrimitive.Trigger {...rest} ref={ref}>
+        {children}
+      </DropdownPrimitive.Trigger>
+    );
+  }
+);
 
 export default Trigger;

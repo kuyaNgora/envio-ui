@@ -5,3 +5,4 @@ export * from "./input";
 export * from "./radio";
 export * from "./slider";
 export * from "./switch";
+export * from "./textarea";

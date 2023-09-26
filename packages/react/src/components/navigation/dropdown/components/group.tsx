@@ -6,13 +6,15 @@ export interface GroupProps extends DropdownPrimitive.DropdownMenuGroupProps {
   className?: string;
 }
 
-const Group: React.FC<GroupProps> = ({ className, children, ...rest }) => {
-  return (
-    <DropdownPrimitive.Group asChild {...rest}>
-      {children}
-    </DropdownPrimitive.Group>
-  );
-};
+const Group = React.forwardRef<HTMLDivElement, GroupProps>(
+  ({ className, children, ...rest }, ref) => {
+    return (
+      <DropdownPrimitive.Group asChild {...rest} ref={ref}>
+        {children}
+      </DropdownPrimitive.Group>
+    );
+  }
+);
 
 //
 
@@ -22,8 +24,14 @@ export interface ItemProps extends DropdownPrimitive.DropdownMenuItemProps {
 
 const ItemCard = itemStyle(DropdownPrimitive.Item);
 
-const Item: React.FC<ItemProps> = ({ className, children, ...rest }) => {
-  return <ItemCard {...rest}>{children}</ItemCard>;
-};
+const Item = React.forwardRef<HTMLDivElement, ItemProps>(
+  ({ className, children, ...rest }, ref) => {
+    return (
+      <ItemCard {...rest} ref={ref}>
+        {children}
+      </ItemCard>
+    );
+  }
+);
 
 export { Group, Item };

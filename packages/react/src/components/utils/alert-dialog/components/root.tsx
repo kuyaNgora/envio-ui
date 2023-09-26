@@ -13,16 +13,15 @@ export interface AlertDialogProps
   className?: string;
 }
 
-const AlertDialog = React.forwardRef<HTMLDialogElement, AlertDialogProps>(
-  ({ className, children, ...rest }) => {
-    return (
-      <AlertDialogPrimitive.Root {...rest}>
-        {children}
-      </AlertDialogPrimitive.Root>
-    );
-  }
-);
-
+const AlertDialog: React.FC<AlertDialogProps> = ({
+  className,
+  children,
+  ...rest
+}) => {
+  return (
+    <AlertDialogPrimitive.Root {...rest}>{children}</AlertDialogPrimitive.Root>
+  );
+};
 export default Object.assign(AlertDialog, {
   Trigger,
   Portal,

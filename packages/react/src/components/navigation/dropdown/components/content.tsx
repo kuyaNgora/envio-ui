@@ -10,13 +10,15 @@ export interface ContentProps
 
 const ContentDiv = contentStyle(DropdownPrimitive.Content);
 
-const Content: React.FC<ContentProps> = ({ className, children, ...rest }) => {
-  return (
-    <ContentDiv {...rest}>
-      {children}
-      <Arrow />
-    </ContentDiv>
-  );
-};
+const Content = React.forwardRef<HTMLDivElement, ContentProps>(
+  ({ className, children, ...rest }, ref) => {
+    return (
+      <ContentDiv {...rest} ref={ref}>
+        {children}
+        <Arrow />
+      </ContentDiv>
+    );
+  }
+);
 
 export default Content;

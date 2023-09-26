@@ -151,7 +151,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
     };
 
     return (
-      <div className="">
+      <div>
         {renderLabel()}
         <Wrapper aria-invalid={!!error}>
           {_prefix && renderPrefix()}
@@ -193,6 +193,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
                 )}
               </span>
             ) : null}
+
             {error && (
               <XmarkOutline
                 style={{

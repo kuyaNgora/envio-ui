@@ -24,9 +24,15 @@ const RadioGroup: React.FC<RadioProps> = ({
   style,
   children,
   defaultValue,
+  ...rest
 }) => {
   return (
-    <Root className={className} style={style} defaultValue={defaultValue}>
+    <Root
+      className={className}
+      style={style}
+      defaultValue={defaultValue}
+      {...rest}
+    >
       {children}
     </Root>
   );

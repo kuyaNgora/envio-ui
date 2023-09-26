@@ -13,8 +13,14 @@ const LabelCard = styled(DropdownPrimitive.Label)`
   color: var(--nvo-gray-700);
 `;
 
-const Label: React.FC<LabelProps> = ({ className, children, ...rest }) => {
-  return <LabelCard {...rest}>{children}</LabelCard>;
-};
+const Label = React.forwardRef<HTMLDivElement, LabelProps>(
+  ({ className, children, ...rest }, ref) => {
+    return (
+      <LabelCard {...rest} ref={ref}>
+        {children}
+      </LabelCard>
+    );
+  }
+);
 
 export default Label;

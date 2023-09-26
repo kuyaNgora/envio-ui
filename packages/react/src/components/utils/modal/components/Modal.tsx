@@ -174,7 +174,7 @@ class Modal extends React.Component<ModalProps, ModalState> {
 
     return (
       <Overlay
-        isBlur={backdropBlur}
+        isblur={backdropBlur}
         className={clsx(isOpen && "entered")}
         data-state={state}
         onClick={this.handleOverlayClick}

@@ -1,0 +1,42 @@
+import { Meta, Story, Canvas, Source, ArgTypes } from '@storybook/blocks';
+import * as TextareaStories  from './textarea.stories.tsx';
+
+<Meta title="Components/Inputs/Textarea"  />
+
+# Textarea
+An Textarea is a form field that a user can type a line of text into.
+
+<b>Textarea</b> can have a placeholder, a default (initial) value, a label and a description.
+
+~~~
+~~~
+### Usage
+#### Simple
+<Canvas>
+    <Story of={TextareaStories.Simple} />
+</Canvas>
+<Source
+    code={`
+import React from "react";
+import { Textarea, TextareaProps } from "@envio-ui/design";
+
+export const Example: React.FC<TextareaProps> = () => {
+    const [value, setValue] = React.useState<string>('');
+
+    return (
+        <Textarea
+            label=""
+            required
+            value={value}
+            onChange={(e) => setValue(e?.target?.value)}
+        />
+    );
+};
+    `}
+
+    dark
+    language="tsx"
+/>
+
+### Props
+<ArgTypes of={TextareaStories.Simple} sort="alpha" />

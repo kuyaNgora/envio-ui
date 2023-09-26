@@ -4,6 +4,7 @@ import badge from "./badge";
 import button from "./button";
 import card from "./card";
 import checkbox from "./checkbox";
+import textarea from "./textarea";
 import input from "./input";
 import label from "./label";
 import modal from "./modal";
@@ -44,6 +45,7 @@ const componentStyles = {
   ...wrapper,
   navbar,
   input,
+  textarea,
   drawer,
   ...stepper,
   ...switchStyle,

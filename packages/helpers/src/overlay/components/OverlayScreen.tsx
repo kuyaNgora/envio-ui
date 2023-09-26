@@ -30,7 +30,7 @@ const FadeOut = keyframes`
 
 export interface OverlayScreenProps {
   /** backdropBlur used to make blur effect to screen behind overlay, default is true */
-  isBlur?: boolean;
+  isblur?: true | false;
 }
 // TODO conver to useComponentStyle
 const OverlayScreen = styled("div")<OverlayScreenProps>`
@@ -44,8 +44,8 @@ const OverlayScreen = styled("div")<OverlayScreenProps>`
   left: 0;
   right: 0;
 
-  ${({ isBlur }) =>
-    isBlur &&
+  ${({ isblur }) =>
+    isblur &&
     `
   @supports (backdrop-filter: blur(4px)) or (--webkit-backdrop-filter: blur(4px)) {
     backdrop-filter: blur(4px);
@@ -90,7 +90,7 @@ const OverlayScreen = styled("div")<OverlayScreenProps>`
   }
 `;
 OverlayScreen.defaultProps = {
-  isBlur: true,
+  isblur: true,
 };
 
 export default OverlayScreen;

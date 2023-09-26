@@ -12,19 +12,17 @@ export interface CheckboxItemProps
 
 const CheckboxItemCard = itemStyle(DropdownPrimitive.CheckboxItem);
 
-const CheckboxItem: React.FC<CheckboxItemProps> = ({
-  className,
-  children,
-  ...rest
-}) => {
-  return (
-    <CheckboxItemCard {...rest}>
-      <ItemIndicator>
-        <CheckOutline size={15} fill="currentColor" />
-      </ItemIndicator>
-      {children}
-    </CheckboxItemCard>
-  );
-};
+const CheckboxItem = React.forwardRef<HTMLInputElement, CheckboxItemProps>(
+  ({ className, children, ...rest }, ref) => {
+    return (
+      <CheckboxItemCard {...rest} ref={ref}>
+        <ItemIndicator>
+          <CheckOutline size={15} fill="currentColor" />
+        </ItemIndicator>
+        {children}
+      </CheckboxItemCard>
+    );
+  }
+);
 
 export default CheckboxItem;

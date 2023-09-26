@@ -1,5 +1,4 @@
 import React from "react";
-import { number } from "prop-types";
 import { useComponentStyles } from "../../../../system";
 import { Box } from "../../../layout";
 import { LabelText } from "../../typography";

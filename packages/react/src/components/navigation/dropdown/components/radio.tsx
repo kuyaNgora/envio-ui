@@ -9,17 +9,15 @@ export interface RadioGroupProps
   className?: string;
 }
 
-const RadioGroup: React.FC<RadioGroupProps> = ({
-  className,
-  children,
-  ...rest
-}) => {
-  return (
-    <DropdownPrimitive.RadioGroup {...rest}>
-      {children}
-    </DropdownPrimitive.RadioGroup>
-  );
-};
+const RadioGroup = React.forwardRef<HTMLInputElement, RadioGroupProps>(
+  ({ className, children, ...rest }, ref) => {
+    return (
+      <DropdownPrimitive.RadioGroup {...rest} ref={ref}>
+        {children}
+      </DropdownPrimitive.RadioGroup>
+    );
+  }
+);
 
 export interface RadioItemProps
   extends DropdownPrimitive.DropdownMenuRadioItemProps {
@@ -28,19 +26,17 @@ export interface RadioItemProps
 
 const RadioItemDiv = itemStyle(DropdownPrimitive.RadioItem);
 
-const RadioItem: React.FC<RadioItemProps> = ({
-  className,
-  children,
-  ...rest
-}) => {
-  return (
-    <RadioItemDiv {...rest}>
-      <ItemIndicator>
-        <Dot size={8} fill="currentColor" style={{ marginTop: -2 }} />
-      </ItemIndicator>
-      {children}
-    </RadioItemDiv>
-  );
-};
+const RadioItem = React.forwardRef<HTMLDivElement, RadioItemProps>(
+  ({ className, children, ...rest }, ref) => {
+    return (
+      <RadioItemDiv {...rest} ref={ref}>
+        <ItemIndicator>
+          <Dot size={8} fill="currentColor" style={{ marginTop: -2 }} />
+        </ItemIndicator>
+        {children}
+      </RadioItemDiv>
+    );
+  }
+);
 
 export { RadioGroup, RadioItem };
