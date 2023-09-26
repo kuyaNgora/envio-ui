@@ -103,7 +103,7 @@ export const Simple = Template.bind({});
 
 export const Advance = Template.bind({});
 Advance.args = {
-  label: "Insert label here",
+  label: "Insert label here ",
 };
 
 export const Validation = Template.bind({});
