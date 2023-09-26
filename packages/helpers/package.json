@@ -1,6 +1,6 @@
 {
   "name": "@envio-ui/helpers",
-  "version": "1.0.22-alpha.0",
+  "version": "1.0.23-alpha.0",
   "description": "Helpers components for the Envio Design System",
   "main": "dist/index.js",
   "module": "dist/icons.esm.js",
