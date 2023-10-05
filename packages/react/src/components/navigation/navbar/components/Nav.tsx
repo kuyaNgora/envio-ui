@@ -5,6 +5,7 @@ import { itemStyle, triggerStyle } from "./utils";
 export interface NavbarItemProps
   extends NavigationPrimitive.NavigationMenuTriggerProps {
   icon?: React.ComponentType<any>;
+  iconColor?: string;
   title: string;
   disabled?: boolean;
 }
@@ -12,13 +13,19 @@ export interface NavbarItemProps
 const Item = itemStyle(NavigationPrimitive.Item);
 const Link = triggerStyle(NavigationPrimitive.Link);
 
-const Nav: React.FC<NavbarItemProps> = ({ title, icon, disabled, ...rest }) => {
+const Nav: React.FC<NavbarItemProps> = ({
+  title,
+  icon,
+  iconColor,
+  disabled,
+  ...rest
+}) => {
   const renderIcon = () => {
     return (
       icon && (
         <div>
           {React.createElement(icon, {
-            fill: "currentColor",
+            fill: iconColor || "currentColor",
             size: 18,
           })}
         </div>
