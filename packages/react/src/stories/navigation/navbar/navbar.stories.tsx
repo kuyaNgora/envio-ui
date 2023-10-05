@@ -127,6 +127,7 @@ const menu = [
     url: "/",
     active: "",
     isDropdown: true,
+    withCarret: false,
     child: [
       {
         icon: TruckOutline,
@@ -269,6 +270,7 @@ export const Example: React.FC = () => {
               title={nav.label}
               icon={nav?.icon}
               disabled={nav?.disabled}
+              withCarret={nav?.withCarret}
             >
               <Navbar.Content>
                 {nav?.child?.map((child, idx) => (

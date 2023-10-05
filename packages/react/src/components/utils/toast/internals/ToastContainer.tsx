@@ -14,7 +14,13 @@ const ToastContainer: React.FC<ToastContainerProps> = ({ toasts }) => {
 
   return (
     <Portal>
-      <Box display="block" position="fixed" bottom={0} right={24}>
+      <Box
+        display="block"
+        position="fixed"
+        bottom={0}
+        right={24}
+        zIndex={9999999}
+      >
         {toasts?.map(
           ({ id, message, onRemove: _onRemove, status, ...rest }) => {
             return (

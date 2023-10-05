@@ -18,7 +18,7 @@ import {
   SlidersOutline,
   TruckOutline,
 } from "@envio-ui/icons";
-import { Button, Navbar, Stack } from "@envio-ui/design";
+import { Navbar } from "@envio-ui/react";
 
 export const Example: React.FC = () => {
     const menu = [
@@ -118,20 +118,37 @@ export const Example: React.FC = () => {
     ];
 
   return (
-    <Navbar
-      brand="https://envio.co.id/static/media/logo.64687ddcab57889e138f.png"
-      menu={menu}
-      actions={
-        <Stack direction="horizontal" spacing="sm">
-          <Button variant="primary" size="sm" borderRadius={20}>
-            actions
-          </Button>
-          <Button variant="primary" size="sm" borderRadius={20}>
-            actions
-          </Button>
-        </Stack>
-      }
-    />
+     <Navbar>
+      {menu?.map((nav, id) => {
+        if (nav?.isDropdown) {
+          return (
+            <Navbar.Dropdown
+              title={nav.label}
+              icon={nav?.icon}
+              disabled={nav?.disabled}
+              withCarret={nav?.withCarret}
+            >
+              <Navbar.Content>
+                {nav?.child?.map((child, idx) => (
+                  <li key={idx}>
+                    <Navbar.Nav title={child.label} icon={child?.icon} />
+                  </li>
+                ))}
+              </Navbar.Content>
+            </Navbar.Dropdown>
+          );
+        }
+
+        return (
+          <Navbar.Nav
+            key={id}
+            title={nav.label}
+            icon={nav?.icon}
+            disabled={nav?.disabled}
+          />
+        );
+      })}
+    </Navbar>
   );
 };
 `} of={NavbarStories.Example} dark language="tsx" />

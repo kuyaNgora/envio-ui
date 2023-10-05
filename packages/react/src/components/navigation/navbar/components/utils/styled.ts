@@ -28,7 +28,7 @@ const listStyle = (element: any) => {
     justify-content: center;
     align-items: center;
     background-color: transparent;
-    padding: 4px;
+    padding: 2px;
     border-radius: 6px;
     list-style: none;
     margin: 0;
@@ -157,9 +157,9 @@ const triggerStyle = (element: any) => {
     font-size: 13px;
     display: flex;
     align-items: center;
-    padding: 0 0.75rem;
+    padding: 0 0.4rem;
     justify-content: start;
-    gap: 4px;
+    gap: 1px;
     background-color: transparent;
     border: none;
     cursor: pointer;
