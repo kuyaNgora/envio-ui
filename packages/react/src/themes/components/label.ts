@@ -37,6 +37,10 @@ const badge: ComponentThemeConfig = {
         backgroundColor: "var(--nvo-warning)",
         color: "var(--nvo-white)",
       },
+      danger: {
+        backgroundColor: "var(--nvo-danger)",
+        color: "var(--nvo-white)",
+      },
       "outline-primary": {
         backgroundColor:
           "rgba(var(--nvo-primary-rgb), var(--nvo-opacity-transparent))",
@@ -56,6 +60,11 @@ const badge: ComponentThemeConfig = {
         backgroundColor:
           "rgba(var(--nvo-warning-rgb), var(--nvo-opacity-transparent))",
         color: "var(--nvo-warning)",
+      },
+      "outline-danger": {
+        backgroundColor:
+          "rgba(var(--nvo-danger-rgb), var(--nvo-opacity-transparent))",
+        color: "var(--nvo-danger)",
       },
     },
   },

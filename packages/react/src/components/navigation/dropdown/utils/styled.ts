@@ -51,7 +51,7 @@ const itemStyle = (element: any) => {
     border-radius: 3px;
     display: flex;
     align-items: center;
-    height: 25px;
+    min-height: 25px;
     padding: 0 5px;
     position: relative;
     padding-left: 25px;
