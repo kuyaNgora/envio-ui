@@ -3,7 +3,7 @@ import radii from "./radii";
 import responsive from "./responsive";
 import shadows from "./shadows";
 import space from "./space";
-import typography from "./typography";
+// import typography from "./typography";
 
 /**
  * Default styled-system theme props based on the theme specification.
@@ -14,7 +14,7 @@ const foundations = {
   colors,
   space,
   sizes: space,
-  ...typography,
+  // ...typography,
   shadows,
   radii,
   ...responsive,
