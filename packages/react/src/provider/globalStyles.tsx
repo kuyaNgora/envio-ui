@@ -71,7 +71,7 @@ const injectGlobalStyles = (
     }
 
     body {
-      font-family: ${p => p.theme.fonts.brand} !important;
+
       color: ${p => p.theme.colors.greydark05};
     }
 
@@ -83,7 +83,6 @@ const injectGlobalStyles = (
     h6,
     p {
       margin: 0;
-      font-family: ${p => p.theme.fonts.brand} !important;
     }
 
     a {
