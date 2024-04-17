@@ -97,7 +97,7 @@ export const Example = () => {
         onChange={e => {
           $handleChange(e.target.files);
         }}
-        type="image/png, image/jpeg"
+        type="image/png, image/jpeg, application/pdf"
       />
       <Uploader.Result data={picture} onRemove={$handleRemove} />
     </Stack>

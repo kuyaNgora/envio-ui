@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+
 import { CircleXmark } from "@envio-ui/icons";
 import { useComponentStyles } from "../../../../system";
 
@@ -52,7 +53,15 @@ const Result: React.FC<ResultProps> = ({
               <Remove onClick={() => onRemove && onRemove(id)}>
                 <CircleXmark size={20} fill="#D63939" />
               </Remove>
-              <img src={img} alt="" style={sx} />
+              <img
+                src={
+                  img?.includes(".pdf") || img?.includes("application/pdf")
+                    ? "https://s3.ap-southeast-1.amazonaws.com/envio.co.id/assets/pdf-file.jpg"
+                    : img
+                }
+                alt=""
+                style={sx}
+              />
             </Wrapper>
           ))}
         </Container>
